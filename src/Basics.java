@@ -17,6 +17,7 @@ public class Basics {
         System.out.println("The Multiplication:- " + multi);
         double takingFun = takingMultiMethod(num1, num2);
         System.out.println("From a multi-function call:- " + takingFun);
+        System.out.println("The average of numbers is(statically typed by me) :- " + average(2, 5, 6));//calling average method.
         if (zeroCheck(num1, num2)) {
             System.out.println("Cannot divide anything by 0");
             return;
@@ -84,6 +85,14 @@ public class Basics {
         double divi = addNum(n1, n2); //taking input from addNum() method.
         double result = divi / 3; //doing simple calculation.
         return result;
+    }
+
+    public static int average(int... number) { //these dots(...) shows that,I don't know how many numbers we may throw in this.
+        int total = 0;
+        for (int x : number) {
+            total += x;
+        }
+        return total / number.length;
     }
 
 }
