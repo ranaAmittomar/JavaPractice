@@ -1,8 +1,8 @@
 # JavaPractice
-Data Structures Practice Repository
+# Data Structures Practice Repository
 Welcome to the Data Structures Practice Repository! In this file, you'll find a curated collection of data structure-related problems and their solutions, ranging from basic to intermediate levels, all implemented in the powerful Java language. Whether you're a beginner looking to strengthen your foundation or an intermediate programmer aiming to enhance your skills, this repository is designed to help you excel in data structures.
 
-Why Choose This Repository?
+# Why Choose This Repository?
 Structured Learning: Problems are organized methodically, gradually building your proficiency in data structures.
 Comprehensive Coverage: We cover a wide array of data structures, including arrays, linked lists, stacks, queues, trees, graphs, and more.
 Detailed Solutions: Each problem comes with a well-documented solution, explaining the logic and implementation step by step.
