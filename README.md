@@ -10,7 +10,8 @@ Java Language: All code is written in Java, a versatile and widely-used language
 Challenging Exercises: Progress from basic concepts to challenging exercises to ensure a thorough understanding.
 Real-World Relevance: Problems are inspired by real-world scenarios, helping you apply your knowledge in practical situations.
 Community Support: Join our growing community of learners to discuss solutions, ask questions, and collaborate with others.
-How to Use This Repository
+
+# How to Use This Repository
 Browse the Problems: Explore the repository's folders to find problems categorized by data structure type.
 
 Choose Your Level: Start with the basics if you're a beginner, or dive into more advanced topics if you're already comfortable with the fundamentals.
@@ -23,7 +24,7 @@ Experiment and Learn: Modify the code, run it, and experiment with different app
 
 Participate and Discuss: Join the community discussions to share your thoughts, learn from others, and clarify any doubts.
 
-Contribute and Collaborate
+# Contribute and Collaborate
 We encourage you to contribute to this repository by adding your own solutions, suggesting improvements, or creating new problems. Together, we can make this resource even more valuable for learners like you.
 
 Remember, mastering data structures is a crucial step toward becoming a proficient programmer, and this repository is here to support your journey. Happy coding, and may your data structures knowledge grow stronger with each problem you solve!
