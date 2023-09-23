@@ -17,4 +17,6 @@ public class DisplayTime {
     public String to12HourTime() {
         return String.format("%d:%02d:%02d %s", ((hour == 0 || hour == 12) ? 0 : hour % 12), minute, seconds, (hour < 12) ? "AM" : "PM");
     }
+
+
 }
