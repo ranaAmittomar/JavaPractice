@@ -103,5 +103,6 @@ public class ArraysQues {
             int median = medianFindArray[middleIndex];
             System.out.print("The median:- " + median);
         }
+        System.out.println();
     }
 }

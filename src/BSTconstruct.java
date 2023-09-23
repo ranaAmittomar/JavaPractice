@@ -1,11 +1,12 @@
 public class BSTconstruct {
+
     private static class Node {
         int data;
         Node left;
         Node right;
 
         public Node(int d) {
-            this.data = d;
+            data = d;
             left = right = null;
         }
     }

@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.EnumSet; //to use the range for enumerations.
 
 
 public class Main {
@@ -25,18 +26,26 @@ public class Main {
         System.out.println("Third construct:- " + obj2.to24HourTime());
         System.out.println("4th construct:- " + obj3.to24HourTime());*/
 
-        BSTconstruct.gettingInput();
-        ArraysQues arraysQues = new ArraysQues();
-        arraysQues.basicSyntax(); //CALLING basicSyntax() method from ArraysQues.java class.
-        arraysQues.initializerArray();//calling initializerArray() .
-        arraysQues.loopPrintArr();
-        arraysQues.tablePrint();
-        arraysQues.arraySum();
-        arraysQues.randomNum();
-        arraysQues.changeArrElem();
-        arraysQues.multiArrayMatrix();
-        arraysQues.medianFind();
+//        BSTconstruct.gettingInput();
+        //-----------------------------------------------//
+//        ArraysQues arraysQues = new ArraysQues();
+//        arraysQues.basicSyntax(); //CALLING basicSyntax() method from ArraysQues.java class.
+//        arraysQues.initializerArray();//calling initializerArray() .
+//        arraysQues.loopPrintArr();
+//        arraysQues.tablePrint();
+//        arraysQues.arraySum();
+//        arraysQues.randomNum();
+//        arraysQues.changeArrElem();
+//        arraysQues.multiArrayMatrix();
+//        arraysQues.medianFind();
         //-------------------------------------------------------------//
+        for (EnumExamples people : EnumExamples.values()) {
+            System.out.printf("%s\t%s\t%d\n", people, people.getDesc(), people.getYear());
+        }
+        System.out.println("\nThe Range usage:- ");
+        for (EnumExamples people : EnumSet.range(EnumExamples.Love, EnumExamples.Anuj)) {
+            System.out.printf("%s\t%s\t%d\n", people, people.getDesc(), people.getYear());
+        }
         /*Recursion recursion = new Recursion();
         System.out.println("The numSum is :- " + recursion.numSum(5));*/
         ;
