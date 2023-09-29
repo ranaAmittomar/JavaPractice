@@ -1,4 +1,4 @@
-import java.util.Random;
+import java.util.*;
 
 public class ArraysQues {
     private int tempArr[] = {2, 4, 5, 7};
@@ -104,5 +104,29 @@ public class ArraysQues {
             System.out.print("The median:- " + median);
         }
         System.out.println();
+    }
+
+    public static void usingArrayList() { //using ArrayList, like vectors from C++.
+        List<Integer> integerList = new ArrayList<Integer>();
+        System.out.println("From List Func");
+        integerList.add(2);
+        integerList.add(0);
+        integerList.add(6);
+        integerList.add(7);
+        integerList.add(1);
+        System.out.println("Index of 6 before sort:- " + integerList.indexOf(6));
+        Collections.sort(integerList);
+        System.out.println("Index of 6 after sort:- " + integerList.indexOf(6));
+        System.out.println("Sorted List:- " + integerList);
+
+    }
+
+    public static void arrayMethods() {
+        int[] arr = {1, 2, 3, 4, 0, 10};
+        System.out.println(arr.length);
+        Arrays.sort(arr);
+        for (int x : arr) {
+            System.out.println(x);
+        }
     }
 }

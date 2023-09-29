@@ -4,9 +4,30 @@ import java.util.EnumSet; //to use the range for enumerations.
 
 public class Main {
 
+    public static void tryCatchFunc() {
+        Scanner in = new Scanner(System.in);
+        int x = 1;
+        do {
+            try {
+                System.out.print("Enter First Num:- ");
+                int n1 = in.nextInt();
+                System.out.print("Enter Second Num:- ");
+                int n2 = in.nextInt();
+                System.out.println("Dividing......");
+                int div = n1 / n2;
+                System.out.println("Division:- " + div);
+                x = 2; //to break the do function and never go to execute while again and again.
+
+            } catch (Exception e) {
+                System.out.println("You can't divide by Zero....");
+            }
+        } while (x == 1);
+    }
+
 
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
+//        tryCatchFunc();
       /*  DisplayTime displayTime = new DisplayTime();
         System.out.println(displayTime.to24Time());
         displayTime.setTime(13, 32, 13);
@@ -28,24 +49,26 @@ public class Main {
 
 //        BSTconstruct.gettingInput();
         //-----------------------------------------------//
-//        ArraysQues arraysQues = new ArraysQues();
-//        arraysQues.basicSyntax(); //CALLING basicSyntax() method from ArraysQues.java class.
-//        arraysQues.initializerArray();//calling initializerArray() .
-//        arraysQues.loopPrintArr();
-//        arraysQues.tablePrint();
-//        arraysQues.arraySum();
-//        arraysQues.randomNum();
-//        arraysQues.changeArrElem();
-//        arraysQues.multiArrayMatrix();
-//        arraysQues.medianFind();
+        ArraysQues arraysQues = new ArraysQues();
+        arraysQues.basicSyntax(); //CALLING basicSyntax() method from ArraysQues.java class.
+        arraysQues.initializerArray();//calling initializerArray() .
+        arraysQues.loopPrintArr();
+        arraysQues.tablePrint();
+        arraysQues.arraySum();
+        arraysQues.randomNum();
+        arraysQues.changeArrElem();
+        arraysQues.multiArrayMatrix();
+        arraysQues.medianFind();
+        arraysQues.usingArrayList();
+        arraysQues.arrayMethods();
         //-------------------------------------------------------------//
-        for (EnumExamples people : EnumExamples.values()) {
+        /*for (EnumExamples people : EnumExamples.values()) {
             System.out.printf("%s\t%s\t%d\n", people, people.getDesc(), people.getYear());
         }
         System.out.println("\nThe Range usage:- ");
         for (EnumExamples people : EnumSet.range(EnumExamples.Love, EnumExamples.Anuj)) {
             System.out.printf("%s\t%s\t%d\n", people, people.getDesc(), people.getYear());
-        }
+        }*/
         /*Recursion recursion = new Recursion();
         System.out.println("The numSum is :- " + recursion.numSum(5));*/
         ;

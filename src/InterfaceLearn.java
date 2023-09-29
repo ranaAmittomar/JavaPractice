@@ -1,4 +1,5 @@
 import java.util.Scanner;
+
 //implementing the interface.
 interface InterfaceLearn {
 
@@ -9,7 +10,13 @@ interface InterfaceLearn {
     void output(); //public & abstract.
 }
 
-class Dev implements InterfaceLearn {
+//we can even make multiple interfaces and the class can implements multiple interface.
+//Also,interfaces can inherit other interfaces.
+interface anotherInterface extends InterfaceLearn {
+    void anotherINTR();
+}
+
+class Dev implements InterfaceLearn, anotherInterface {
     String name;
     int sal;
 
@@ -30,10 +37,18 @@ class Dev implements InterfaceLearn {
         System.out.println(InterfaceLearn.age); //we can use interface variable directly without object creating as they are Static in interface.
     }
 
-    public static void main(String[] args) {
+    public void anotherINTR() {
         InterfaceLearn obj = new Dev();
+        System.out.println("It's inside anotherInter method but outputting output method from first interface.");
+        obj.output();
+        System.out.println("Hello from anotherINTR interface.");
+    }
+
+    public static void main(String[] args) {
+        Dev obj = new Dev();
         obj.input();
         obj.output();
+        obj.anotherINTR();
     }
 }
 
