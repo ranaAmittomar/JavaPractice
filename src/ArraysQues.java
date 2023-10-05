@@ -153,7 +153,7 @@ public class ArraysQues {
         return arr;
     }
 
-    public static void prefixSum() {
+    public static void prefixSum() { //prefix sum ,it's helpful to find the sum till last element in array.
 
         int[] arr = {2, 4, 6, 7, 8, 9};
         int[] temp = new int[arr.length];
