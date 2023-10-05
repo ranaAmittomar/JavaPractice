@@ -1,8 +1,17 @@
+import java.util.Arrays;
 import java.util.Scanner;
 import java.util.EnumSet; //to use the range for enumerations.
 
 
 public class Main {
+
+
+    public static void swapNumbers(int a, int b) { //swapNumbers without third var.;
+        a = a + b;
+        b = a - b;
+        a = a - b;
+        System.out.print("\nSwapped numbers: a= " + a + " b= " + b);
+    }
 
     public static void tryCatchFunc() {
         Scanner in = new Scanner(System.in);
@@ -61,6 +70,11 @@ public class Main {
         arraysQues.medianFind();
         arraysQues.usingArrayList();
         arraysQues.arrayMethods();
+        System.out.print("Sort it up: " + Arrays.toString(arraysQues.sortItUp()));
+
+        swapNumbers(5, 6);
+
+
         //-------------------------------------------------------------//
         /*for (EnumExamples people : EnumExamples.values()) {
             System.out.printf("%s\t%s\t%d\n", people, people.getDesc(), people.getYear());

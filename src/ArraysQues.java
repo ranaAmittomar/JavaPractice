@@ -129,4 +129,35 @@ public class ArraysQues {
             System.out.println(x);
         }
     }
+
+
+    public static int[] sortItUp() { //Question Asked by google/meta
+        int[] arr = {0, 1, 1, 1, 0, 0, 0, 2, 2, 2, 2, 2, 1, 1, 0};
+        int left_bound = 0;
+        int right_bound = arr.length - 1;
+        int current = 0;
+        while (current <= right_bound) {
+            if (arr[current] == 2) {
+                arr[current] = arr[right_bound];
+                arr[right_bound] = 2;
+                right_bound -= 1;
+            } else if (arr[current] == 1) {
+                current += 1;
+            } else {
+                arr[current] = arr[left_bound];
+                arr[left_bound] = 0;
+                left_bound += 1;
+                current += 1;
+            }
+        }
+        return arr;
+    }
+
+    public static void prefixSum() {
+
+        int[] arr = {2, 4, 6, 7, 8, 9};
+        int[] temp = new int[arr.length];
+
+    }
 }
+
