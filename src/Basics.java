@@ -95,4 +95,42 @@ public class Basics {
         return total / number.length;
     }
 
+
+    public static void main(String[] args) {
+
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter the num to check Armstrong Num: ");
+        int num = in.nextInt();
+        int digit = countDigit(num);
+        System.out.println(Armstrong(num, digit));
+
+    }
+
+    private static boolean Armstrong(int num, int digit) {
+
+        int ans = 0;
+        int n = num, rem;
+
+        while (n != 0) {
+            rem = n % 10;
+            n /= 10;
+            ans = (int) (ans + Math.pow(rem, digit));
+        }
+
+        if (ans == num)
+            return true;
+        else
+            return false;
+
+    }
+
+    private static int countDigit(int num) {
+        int count = 0;
+        int n = num;
+        while (n != 0) {
+            count++;
+            n /= 10;
+        }
+        return count;
+    }
 }
