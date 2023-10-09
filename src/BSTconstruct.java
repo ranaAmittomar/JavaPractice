@@ -6,8 +6,9 @@ public class BSTconstruct {
         Node right;
 
         public Node(int d) {
-            data = d;
-            left = right = null;
+            this.data = d;
+            this.left = null;
+            this.right = null;
         }
     }
 
@@ -48,6 +49,7 @@ public class BSTconstruct {
         preOrder(root.right);
     }
 
+    
     public static void gettingInput() {
         int[] binaryArr = {2, 1, 4, 454, 234, 5};
         Node root = null;

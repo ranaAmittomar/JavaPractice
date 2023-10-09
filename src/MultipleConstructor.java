@@ -3,7 +3,7 @@ public class MultipleConstructor {
     private int minute;
     private int seconds;
 
-    public MultipleConstructor() {
+    public MultipleConstructor() 
         this(0, 0, 0);
     }
 
