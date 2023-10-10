@@ -1,11 +1,28 @@
+
 public class Recursion {
 
+    public static int fib(int n) {
 
-    public static int numSum(int x) { //sum all num till the given number from 1.
-        if (x == 1) {
-            return 1;
-        } else {
-            return x + numSum(x - 1);
+        int[] memo = new int[1000];
+
+        if (n <= 1) {
+            return n;
         }
+        if (memo[n] != 0) {
+            return memo[n];
+        }
+
+        else {
+            memo[n] = fib(n - 1) + fib(n - 2);
+            return memo[n];
+        }
+
     }
+
+    public static void main(String[] args) {
+
+        int n=6;
+        System.out.println(fib(10));
+    }
+
 }

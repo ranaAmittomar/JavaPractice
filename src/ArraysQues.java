@@ -1,39 +1,41 @@
 import java.util.*;
 
 public class ArraysQues {
-    private int tempArr[] = {2, 4, 5, 7};
+    private int tempArr[] = { 2, 4, 5, 7 };
 
-    public static void basicSyntax() {
-        int[] arr = new int[10]; //syntax to max array.
+    public void basicSyntax() {
+        int[] arr = new int[10]; // syntax to max array.
         arr[1] = 10;
         arr[2] = 5;
         arr[3] = 4;
-        System.out.println("from basicSyntax method: " + arr[2]); //printing array by index.(REMEMBER,WE'RE WASTING LOTS OF MEMORY HERE! WE'LL OPTIMIZE IT IN ANOTHER METHOD.)
+        System.out.println("from basicSyntax method: " + arr[2]); // printing array by index.(REMEMBER,WE'RE WASTING
+                                                                  // LOTS OF MEMORY HERE! WE'LL OPTIMIZE IT IN ANOTHER
+                                                                  // METHOD.)
     }
 
-    public static void initializerArray() {
-        int[] arr = {2, 4, 5, 6, 1, 8};
-        System.out.println(arr[4]); //printing element at index 4->1.
+    public void initializerArray() {
+        int[] arr = { 2, 4, 5, 6, 1, 8 };
+        System.out.println(arr[4]); // printing element at index 4->1.
     }
 
-    public static void loopPrintArr() {
-        int[] arr = {2, 3, 4, 5, 6, 7, 8};
+    public void loopPrintArr() {
+        int[] arr = { 2, 3, 4, 5, 6, 7, 8 };
         for (int j : arr) {
             System.out.print(j + " ");
         }
         System.out.println();
     }
 
-    public static void tablePrint() { //printing array in table-indexing format.
+    public void tablePrint() { // printing array in table-indexing format.
         System.out.println("Index\tNumber");
-        int[] arr = {2, 33, 45, 435, 26, 713, 81};
+        int[] arr = { 2, 33, 45, 435, 26, 713, 81 };
         for (int i = 0; i < arr.length; i++) {
             System.out.println(i + 1 + " \t " + arr[i]);
         }
     }
 
-    public static void arraySum() { //Array Element sum.
-        int[] arr = {2, 33, 45, 435, 26, 713, 81};
+    public void arraySum() { // Array Element sum.
+        int[] arr = { 2, 33, 45, 435, 26, 713, 81 };
         int sum = 0;
         for (int j : arr) {
             sum += j;
@@ -41,7 +43,7 @@ public class ArraysQues {
         System.out.println("The sum of array numbers is :- " + sum);
     }
 
-    public static void randomNum() {
+    public void randomNum() {
         Random random = new Random();
         int[] frequency = new int[7];
         for (int roll = 1; roll < 100; roll++) {
@@ -53,8 +55,8 @@ public class ArraysQues {
         }
     }
 
-    public static void changeArrElem() { //changing array Element.
-        int[] x = {2, 4, 5, 6};
+    public void changeArrElem() { // changing array Element.
+        int[] x = { 2, 4, 5, 6 };
         System.out.print("Before addition the array is:- ");
         for (int t : x) {
             System.out.print(t + " ");
@@ -66,8 +68,8 @@ public class ArraysQues {
         }
     }
 
-    public static void multiArrayMatrix() { //printing Matrix
-        int[][] matrix = {{23, 4, 5}, {2, 2, 3}, {4, 5, 6}};
+    public void multiArrayMatrix() { // printing Matrix
+        int[][] matrix = { { 23, 4, 5 }, { 2, 2, 3 }, { 4, 5, 6 } };
         System.out.println();
         System.out.println("The Matrix is: ");
         for (int row = 0; row < matrix.length; row++) {
@@ -78,10 +80,10 @@ public class ArraysQues {
         }
     }
 
-    //Finding the median in an Array
-    public static void medianFind() {
+    // Finding the median in an Array
+    public void medianFind() {
         System.out.println();
-        int[] medianFindArray = {2, 10, 5, 6, 7, 8, 9, 12, 41, 12};
+        int[] medianFindArray = { 2, 10, 5, 6, 7, 8, 9, 12, 41, 12 };
         if (medianFindArray.length == 0) {
             throw new IllegalArgumentException("Array is empty");
         }
@@ -106,7 +108,7 @@ public class ArraysQues {
         System.out.println();
     }
 
-    public static void usingArrayList() { //using ArrayList, like vectors from C++.
+    public void usingArrayList() { // using ArrayList, like vectors from C++.
         List<Integer> integerList = new ArrayList<Integer>();
         System.out.println("From List Func");
         integerList.add(2);
@@ -121,8 +123,8 @@ public class ArraysQues {
 
     }
 
-    public static void arrayMethods() {
-        int[] arr = {1, 2, 3, 4, 0, 10};
+    public void arrayMethods() {
+        int[] arr = { 1, 2, 3, 4, 0, 10 };
         System.out.println(arr.length);
         Arrays.sort(arr);
         for (int x : arr) {
@@ -130,9 +132,8 @@ public class ArraysQues {
         }
     }
 
-
-    public static int[] sortItUp() { //Question Asked by google/meta
-        int[] arr = {0, 1, 1, 1, 0, 0, 0, 2, 2, 2, 2, 2, 1, 1, 0};
+    public int[] sortItUp() { // Question Asked by google/meta
+        int[] arr = { 0, 1, 1, 1, 0, 0, 0, 2, 2, 2, 2, 2, 1, 1, 0 };
         int left_bound = 0;
         int right_bound = arr.length - 1;
         int current = 0;
@@ -153,11 +154,19 @@ public class ArraysQues {
         return arr;
     }
 
-    public static void prefixSum() { //prefix sum ,it's helpful to find the sum till last element in array.
 
-        int[] arr = {2, 4, 6, 7, 8, 9};
-        int[] temp = new int[arr.length];
-
+    public void mergeSortedArray(){
+       
     }
-}
 
+    public void uniqueNum() {
+        int[] arr = { 2, 2, 4, 4, 5, 5, 1 };
+
+        int uniqueVar = 0;
+        for (int i = 0; i < arr.length - 1; i++) {
+            uniqueVar = uniqueVar ^ arr[i];
+        }
+        System.out.println("Unique Variable is: " + uniqueVar);
+    }
+
+}
