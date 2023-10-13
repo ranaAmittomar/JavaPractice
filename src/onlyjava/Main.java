@@ -1,6 +1,9 @@
+package onlyjava;
+
+import dsa.ArraysQues;
+
 import java.util.Arrays;
 import java.util.Scanner;
-import java.util.EnumSet; //to use the range for enumerations.
 
 public class Main {
 
@@ -35,34 +38,34 @@ public class Main {
         Scanner input = new Scanner(System.in);
         // tryCatchFunc();
         /*
-         * DisplayTime displayTime = new DisplayTime();
+         * onlyjava.DisplayTime displayTime = new onlyjava.DisplayTime();
          * System.out.println(displayTime.to24Time());
          * displayTime.setTime(13, 32, 13);
          * System.out.println(displayTime.to24Time());
          * System.out.println(displayTime.to12HourTime());
          */
         /*
-         * GUIapp.graphics();
+         * onlyjava.GUIapp.graphics();
          * AdvanceGUI advanceGUI = new AdvanceGUI();
          * advanceGUI.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
          * advanceGUI.setSize(275, 180);
          * advanceGUI.setVisible(true);
          */
         /*
-         * MultipleConstructor obj = new MultipleConstructor();
-         * MultipleConstructor obj1 = new MultipleConstructor(23);
-         * MultipleConstructor obj2 = new MultipleConstructor(23, 33);
-         * MultipleConstructor obj3 = new MultipleConstructor(23, 23, 23);
+         * onlyjava.MultipleConstructor obj = new onlyjava.MultipleConstructor();
+         * onlyjava.MultipleConstructor obj1 = new onlyjava.MultipleConstructor(23);
+         * onlyjava.MultipleConstructor obj2 = new onlyjava.MultipleConstructor(23, 33);
+         * onlyjava.MultipleConstructor obj3 = new onlyjava.MultipleConstructor(23, 23, 23);
          * System.out.println("First construct:- " + obj.to24HourTime());
          * System.out.println("Second construct:- " + obj1.to24HourTime());
          * System.out.println("Third construct:- " + obj2.to24HourTime());
          * System.out.println("4th construct:- " + obj3.to24HourTime());
          */
 
-        // BSTconstruct.gettingInput();
+        // dsa.BSTconstruct.gettingInput();
         // -----------------------------------------------//
         ArraysQues arraysQues = new ArraysQues();
-        arraysQues.basicSyntax(); // CALLING basicSyntax() method from ArraysQues.java class.
+        arraysQues.basicSyntax(); // CALLING basicSyntax() method from dsa.ArraysQues.java class.
         arraysQues.initializerArray();// calling initializerArray() .
         arraysQues.loopPrintArr();
         arraysQues.tablePrint();
@@ -81,48 +84,48 @@ public class Main {
 
         // -------------------------------------------------------------//
         /*
-         * for (EnumExamples people : EnumExamples.values()) {
+         * for (onlyjava.EnumExamples people : onlyjava.EnumExamples.values()) {
          * System.out.printf("%s\t%s\t%d\n", people, people.getDesc(),
          * people.getYear());
          * }
          * System.out.println("\nThe Range usage:- ");
-         * for (EnumExamples people : EnumSet.range(EnumExamples.Love,
-         * EnumExamples.Anuj)) {
+         * for (onlyjava.EnumExamples people : EnumSet.range(onlyjava.EnumExamples.Love,
+         * onlyjava.EnumExamples.Anuj)) {
          * System.out.printf("%s\t%s\t%d\n", people, people.getDesc(),
          * people.getYear());
          * }
          */
         /*
-         * Recursion recursion = new Recursion();
+         * dsa.Recursion recursion = new dsa.Recursion();
          * System.out.println("The numSum is :- " + recursion.numSum(5));
          */
         ;
         /*
-         * PracticingClassConstr practicingClassConstr2 = new
-         * PracticingClassConstr("Lovely"); //we passed String because in
-         * PracticingClassConstr we created a constructor which takes an argument
-         * PracticingClassConstr practicingClassConstr = new
-         * PracticingClassConstr("Amit"); //creating object for PracticingClassConstr
+         * onlyjava.PracticingClassConstr practicingClassConstr2 = new
+         * onlyjava.PracticingClassConstr("Lovely"); //we passed String because in
+         * onlyjava.PracticingClassConstr we created a constructor which takes an argument
+         * onlyjava.PracticingClassConstr practicingClassConstr = new
+         * onlyjava.PracticingClassConstr("Amit"); //creating object for onlyjava.PracticingClassConstr
          * class to use the methods inside it.
          * // System.out.println("Enter any name:- ");
          * // String tempName = input.nextLine(); //taking user input
          * // practicingClassConstr.setGirlName(tempName); //setting it to setter in
-         * PracticingClassConstr method,
+         * onlyjava.PracticingClassConstr method,
          * practicingClassConstr.saying(); //printing out from a method inside
-         * PracticingClassConstr
+         * onlyjava.PracticingClassConstr
          * practicingClassConstr2.saying();
          */
         /*
-         * Basics.takingInput(); //We've written this-> Basics.takingInput(); with the
-         * METHOD we defined in Basics Class & rest done by other methods.
-         * SearchAlgos searchAlgos = new SearchAlgos();
-         * SortingAlgo sortingAlgo = new SortingAlgo();
+         * onlyjava.Basics.takingInput(); //We've written this-> onlyjava.Basics.takingInput(); with the
+         * METHOD we defined in onlyjava.Basics Class & rest done by other methods.
+         * dsa.SearchAlgos searchAlgos = new dsa.SearchAlgos();
+         * dsa.SortingAlgo sortingAlgo = new dsa.SortingAlgo();
          * 
-         * LinklistQues linklistQues = new LinklistQues();
-         * StackQues stackQues = new StackQues();
-         * QueueQues queueQues = new QueueQues();
-         * GraphQues graphQues = new GraphQues();
-         * TreeQues treeQues = new TreeQues();
+         * dsa.LinklistQues linklistQues = new dsa.LinklistQues();
+         * dsa.StackQues stackQues = new dsa.StackQues();
+         * dsa.QueueQues queueQues = new dsa.QueueQues();
+         * dsa.GraphQues graphQues = new dsa.GraphQues();
+         * dsa.TreeQues treeQues = new dsa.TreeQues();
          */
     }
 }

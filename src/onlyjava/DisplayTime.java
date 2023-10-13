@@ -1,3 +1,5 @@
+package onlyjava;
+
 public class DisplayTime {
     private int hour;
     private int minute;

@@ -1,3 +1,5 @@
+package onlyjava;
+
 public class MultipleConstructor {
     private int hour;
     private int minute;

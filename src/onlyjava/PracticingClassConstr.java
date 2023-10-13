@@ -1,3 +1,5 @@
+package onlyjava;
+
 public class PracticingClassConstr {
     private String girlName; //Instantiate of class,because it's only available to use within this class & in methods but not in other classes.
 

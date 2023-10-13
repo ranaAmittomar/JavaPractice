@@ -1,3 +1,5 @@
+package onlyjava;
+
 import java.util.Scanner;
 
 //implementing the interface.

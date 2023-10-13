@@ -1,3 +1,5 @@
+package dsa;
+
 import java.util.*;
 
 public class ArraysQues {
@@ -132,7 +134,7 @@ public class ArraysQues {
         }
     }
 
-    public int[] sortItUp() { // Question Asked by google/meta
+    public int[] sortItUp() { // Question Asked by google/meta/paytm.
         int[] arr = { 0, 1, 1, 1, 0, 0, 0, 2, 2, 2, 2, 2, 1, 1, 0 };
         int left_bound = 0;
         int right_bound = arr.length - 1;

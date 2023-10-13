@@ -1,3 +1,5 @@
+package onlyjava;
+
 public enum EnumExamples {
     //enumerations are Constants that are also Objects.
     Amit("Tomar", 29),

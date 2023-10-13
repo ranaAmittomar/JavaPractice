@@ -1,3 +1,5 @@
+package dsa;
+
 public class BSTconstruct {
 
     private static class Node {
