@@ -5,16 +5,15 @@ import java.util.Scanner;
 public class StringsQues {
 
 
-    public static  void strFuncs(){
+    public static void strFuncs() {
         String splitString = "My name is Amit,You are good";
-        System.out.println("The Length of string is: "+splitString.length());
+        System.out.println("The Length of string is: " + splitString.length());
         String[] words = splitString.split(" ");
-        for(String word:words){
+        for (String word : words) {
             System.out.println(word);
         }
 
     }
-
 
 
     private static boolean isPalindrome(String s) {
