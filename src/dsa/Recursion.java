@@ -1,5 +1,8 @@
 package dsa;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Recursion {
 
     public static int fib(int n) {
@@ -78,23 +81,45 @@ public class Recursion {
         return sortedArrCheck(arr, index + 1);
     }
 
+    public static void subsetsArray(ArrayList<Integer> input, ArrayList<Integer> output, int index) {
+
+        if (index >= input.size()) {
+            for (int i : output) {
+                System.out.print(i);
+            }
+            System.out.println();
+            return;
+        }
+
+        subsetsArray(input, output, index + 1); // taking element.
+        output.add(input.get(index));
+        subsetsArray(input, output, index + 1);
+        output.remove(output.size() - 1); // remove the added element for the next branch
+    }
+
     public static void main(String[] args) {
 
         // String str[] = { "zero", "one", "two", "three", "four", "five", "six",
         // "seven", "eight", "nine" };
 
-        int timesPower = 3;
-        int numForPower = 7;
-        int[] arr = { 1, 2, 3, 4, 5 }; // array for sort check.
-        // System.out.println(fib(10));
-        // System.out.println(printingSum(n));
-        // printNums(n);
-        // printNumsRev(n);
-        // printAlphaNums(str, n);
-        System.out.println("Power of " + numForPower + " times " + timesPower);
-        powOf2(timesPower, numForPower);
-        System.out.println(fastExpo(timesPower, numForPower));
-        System.out.println(sortedArrCheck(arr, 1));
+        // int timesPower = 3;
+        // int numForPower = 7;
+        // int[] arr = { 1, 2, 3 }; // array for sort check.
+        // // System.out.println(fib(10));
+        // // System.out.println(printingSum(n));
+        // // printNums(n);
+        // // printNumsRev(n);
+        // // printAlphaNums(str, n);
+        // System.out.println("Power of " + numForPower + " times " + timesPower);
+        // powOf2(timesPower, numForPower);
+        // System.out.println(fastExpo(timesPower, numForPower));
+        // System.out.println(sortedArrCheck(arr, 1));
+        ArrayList<Integer> arr1 = new ArrayList<>();
+        arr1.add(1);
+        arr1.add(2);
+        arr1.add(3);
+        ArrayList<Integer> output = new ArrayList<>();
+        subsetsArray(arr1, output, 0);
     }
 
 }
