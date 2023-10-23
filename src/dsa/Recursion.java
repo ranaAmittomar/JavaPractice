@@ -1,7 +1,6 @@
 package dsa;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class Recursion {
 
@@ -103,6 +102,7 @@ public class Recursion {
             System.out.println(output);
             return;
         }
+        // include character.
         subsetString(input, output + input.charAt(strIndex), strIndex + 1);
 
         // Exclude the current character
@@ -117,6 +117,28 @@ public class Recursion {
             return 1;
         }
         return jumpStairs(n - 1) + jumpStairs(n - 2) + jumpStairs(n - 3);
+    }
+
+    public static char[] swapChars(char[] ch, int i, int j) {
+        char temp = ch[i];
+        ch[i] = ch[j];
+        ch[j] = temp;
+        return ch;
+    }
+
+    public static void permutationStr(String str, int index) {
+
+        if (index >= str.length()) {
+            System.out.println(str);
+            return;
+        }
+        char[] ch = str.toCharArray(); // Convert the string to a character array
+        for (int i = index; i < str.length(); i++) {
+            ch = swapChars(ch, index, i); // Swap characters in the character array
+            permutationStr(new String(ch), index + 1); // Recurse with the modified string
+            ch = swapChars(ch, index, i); // Restore the original character array
+        }
+
     }
 
     public static void main(String[] args) {
@@ -147,6 +169,7 @@ public class Recursion {
         String s = "abc";
         String outputString = "";
         subsetString(s, outputString, 0);
+        permutationStr(s, 0);
 
     }
 
