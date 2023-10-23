@@ -11,8 +11,8 @@ public class ArraysQues {
         arr[2] = 5;
         arr[3] = 4;
         System.out.println("from basicSyntax method: " + arr[2]); // printing array by index.(REMEMBER,WE'RE WASTING
-                                                                  // LOTS OF MEMORY HERE! WE'LL OPTIMIZE IT IN ANOTHER
-                                                                  // METHOD.)
+        // LOTS OF MEMORY HERE! WE'LL OPTIMIZE IT IN ANOTHER
+        // METHOD.)
     }
 
     public void initializerArray() {
@@ -156,9 +156,21 @@ public class ArraysQues {
         return arr;
     }
 
+    public void mergeSortedArray() {
 
-    public void mergeSortedArray(){
-       
+    }
+
+    public static void isSorted() {
+        int[] arr = { 1, 2, 3, 4, 5 };
+
+        for (int i = 1; i <= arr.length - 1; i++) {
+            if (arr[i] > arr[i - 1]) {
+                System.out.println("Sorted " + arr[i]);
+            } else {
+                System.out.println("Not Sorted");
+            }
+        }
+
     }
 
     public void uniqueNum() {
@@ -169,6 +181,10 @@ public class ArraysQues {
             uniqueVar = uniqueVar ^ arr[i];
         }
         System.out.println("Unique Variable is: " + uniqueVar);
+    }
+
+    public static void main(String[] args) {
+        isSorted();
     }
 
 }

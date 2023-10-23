@@ -5,25 +5,96 @@ public class Recursion {
     public static int fib(int n) {
 
         int[] memo = new int[1000];
-
         if (n <= 1) {
             return n;
         }
         if (memo[n] != 0) {
             return memo[n];
-        }
-
-        else {
+        } else {
             memo[n] = fib(n - 1) + fib(n - 2);
             return memo[n];
         }
+    }
 
+    public static int printingSum(int n) {
+        if (n == 0) {
+            return 0;
+        } else {
+            return n + printingSum(n - 1);
+        }
+    }
+
+    public static void printNums(int n) {
+        if (n > 0) {
+            printNums(n - 1);
+            System.out.println(n + " ");
+        }
+    }
+
+    public static void printNumsRev(int n) {
+        if (n > 0) {
+            System.out.println(n + " ");
+            printNumsRev(n - 1);
+        }
+    }
+
+    private static void printAlphaNums(String[] str, int n) { // printing alphabet for the numbers.
+
+        if (n == 0) {
+            return;
+        }
+        printAlphaNums(str, n / 10);
+        System.out.print(str[n % 10] + " ");
+    }
+
+    public static int powOf2(int timesPow, int num) {
+        if (timesPow == 0) {
+            return 1;
+        }
+        int ans = num * powOf2(timesPow - 1, num);
+        System.out.println("for " + timesPow + " answer is " + ans);
+        return ans;
+    }
+
+    public static int fastExpo(int time, int num) { // fast exponential
+        if (time == 0) {
+            return 1;
+        }
+        int ans = fastExpo(time / 2, num);
+        ans *= ans; // Square the answer
+        if (time % 2 == 1) {
+            ans *= num; // If time is odd, multiply by num
+        }
+        return ans;
+    }
+
+    public static boolean sortedArrCheck(int[] arr, int index) {
+        if (index >= arr.length) {
+            return true;
+        }
+        if (arr[index] < arr[index - 1]) {
+            return false;
+        }
+        return sortedArrCheck(arr, index + 1);
     }
 
     public static void main(String[] args) {
 
-        int n=6;
-        System.out.println(fib(10));
+        // String str[] = { "zero", "one", "two", "three", "four", "five", "six",
+        // "seven", "eight", "nine" };
+
+        int timesPower = 3;
+        int numForPower = 7;
+        int[] arr = { 1, 2, 3, 4, 5 }; // array for sort check.
+        // System.out.println(fib(10));
+        // System.out.println(printingSum(n));
+        // printNums(n);
+        // printNumsRev(n);
+        // printAlphaNums(str, n);
+        System.out.println("Power of " + numForPower + " times " + timesPower);
+        powOf2(timesPower, numForPower);
+        System.out.println(fastExpo(timesPower, numForPower));
+        System.out.println(sortedArrCheck(arr, 1));
     }
 
 }
