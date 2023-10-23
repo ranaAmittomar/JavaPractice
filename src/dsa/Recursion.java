@@ -97,6 +97,18 @@ public class Recursion {
         output.remove(output.size() - 1); // remove the added element for the next branch
     }
 
+    public static void subsetString(String input, String output, int strIndex) {
+
+        if (strIndex == input.length()) {
+            System.out.println(output);
+            return;
+        }
+        subsetString(input, output + input.charAt(strIndex), strIndex + 1);
+
+        // Exclude the current character
+        subsetString(input, output, strIndex + 1);
+    }
+
     public static int jumpStairs(int n) { // number of jumps to reach to a certain number.
         if (n < 0) {
             return 0;
@@ -111,7 +123,6 @@ public class Recursion {
 
         // String str[] = { "zero", "one", "two", "three", "four", "five", "six",
         // "seven", "eight", "nine" };
-
         // int timesPower = 3;
         // int numForPower = 7;
         // int[] arr = { 1, 2, 3 }; // array for sort check.
@@ -130,8 +141,12 @@ public class Recursion {
         // arr1.add(3);
         // ArrayList<Integer> output = new ArrayList<>();
         // subsetsArray(arr1, output, 0);
-        int num = 5;
-        System.out.println("Number of jumps to reach " + num + " are " + jumpStairs(num));
+        // int num = 5;
+        // System.out.println("Number of jumps to reach " + num + " are " +
+        // jumpStairs(num));
+        String s = "abc";
+        String outputString = "";
+        subsetString(s, outputString, 0);
 
     }
 
