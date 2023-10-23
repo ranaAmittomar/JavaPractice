@@ -130,8 +130,8 @@ public class Recursion {
         // arr1.add(3);
         // ArrayList<Integer> output = new ArrayList<>();
         // subsetsArray(arr1, output, 0);
-
-        System.out.println(jumpStairs(4));
+        int num = 5;
+        System.out.println("Number of jumps to reach " + num + " are " + jumpStairs(num));
 
     }
 
