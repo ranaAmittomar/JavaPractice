@@ -97,6 +97,16 @@ public class Recursion {
         output.remove(output.size() - 1); // remove the added element for the next branch
     }
 
+    public static int jumpStairs(int n) { // number of jumps to reach to a certain number.
+        if (n < 0) {
+            return 0;
+        }
+        if (n == 0) {
+            return 1;
+        }
+        return jumpStairs(n - 1) + jumpStairs(n - 2) + jumpStairs(n - 3);
+    }
+
     public static void main(String[] args) {
 
         // String str[] = { "zero", "one", "two", "three", "four", "five", "six",
@@ -114,12 +124,15 @@ public class Recursion {
         // powOf2(timesPower, numForPower);
         // System.out.println(fastExpo(timesPower, numForPower));
         // System.out.println(sortedArrCheck(arr, 1));
-        ArrayList<Integer> arr1 = new ArrayList<>();
-        arr1.add(1);
-        arr1.add(2);
-        arr1.add(3);
-        ArrayList<Integer> output = new ArrayList<>();
-        subsetsArray(arr1, output, 0);
+        // ArrayList<Integer> arr1 = new ArrayList<>();
+        // arr1.add(1);
+        // arr1.add(2);
+        // arr1.add(3);
+        // ArrayList<Integer> output = new ArrayList<>();
+        // subsetsArray(arr1, output, 0);
+
+        System.out.println(jumpStairs(4));
+
     }
 
 }
