@@ -2,6 +2,7 @@ package dsa;
 
 import java.util.LinkedList;
 import java.util.Queue;
+import java.util.Scanner;
 
 public class QueueQues {
 
@@ -23,8 +24,20 @@ public class QueueQues {
 
     }
 
+    public static void quesFuncUsingLoop() {
+        Scanner sc = new Scanner(System.in);
+        Queue<Integer> q = new LinkedList<>();
+        for (int i = 0; i < 4; i++) {
+            int num = sc.nextInt();
+            q.add(num);
+        }
+        System.out.println("Queue after loop insertion is : " + q);
+        sc.close();
+    }
+
     public static void main(String[] args) {
-        quesFunctions();
+        // quesFunctions();
+        quesFuncUsingLoop();
     }
 
 }
