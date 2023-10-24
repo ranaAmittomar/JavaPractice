@@ -35,6 +35,9 @@ public class QueueQues {
         sc.close();
     }
 
+    // Please refer BST implementation class and see how to implement BST using
+    // Queue Java Collecton.
+
     public static void main(String[] args) {
         // quesFunctions();
         quesFuncUsingLoop();
