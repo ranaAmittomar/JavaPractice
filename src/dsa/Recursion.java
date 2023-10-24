@@ -119,7 +119,7 @@ public class Recursion {
         return jumpStairs(n - 1) + jumpStairs(n - 2) + jumpStairs(n - 3);
     }
 
-    public static char[] swapChars(char[] ch, int i, int j) {
+    public static char[] swapChars(char[] ch, int i, int j) { // swapping the characters function .
         char temp = ch[i];
         ch[i] = ch[j];
         ch[j] = temp;
