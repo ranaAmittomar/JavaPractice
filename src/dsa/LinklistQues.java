@@ -41,6 +41,7 @@ class LinklistQues {
         }
         System.out.println("null");
     }
+    
 
     public static void main(String[] args) {
         LinklistQues ll = new LinklistQues();
