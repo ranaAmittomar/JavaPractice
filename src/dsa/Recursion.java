@@ -141,35 +141,49 @@ public class Recursion {
 
     }
 
+    public static void towerOfHanoi(int n, char from_rod, char to_rod, char aux_rod) {
+
+        if (n == 0) {
+            return;
+        }
+        towerOfHanoi(n - 1, from_rod, aux_rod, to_rod);
+        System.out.println("Move disk " + n + " from rod "
+                + from_rod + " to rod "
+                + to_rod);
+        towerOfHanoi(n - 1, aux_rod, to_rod, from_rod);
+    }
+
     public static void main(String[] args) {
 
         // String str[] = { "zero", "one", "two", "three", "four", "five", "six",
         // "seven", "eight", "nine" };
-        // int timesPower = 3;
-        // int numForPower = 7;
-        // int[] arr = { 1, 2, 3 }; // array for sort check.
-        // // System.out.println(fib(10));
-        // // System.out.println(printingSum(n));
-        // // printNums(n);
-        // // printNumsRev(n);
-        // // printAlphaNums(str, n);
-        // System.out.println("Power of " + numForPower + " times " + timesPower);
-        // powOf2(timesPower, numForPower);
-        // System.out.println(fastExpo(timesPower, numForPower));
-        // System.out.println(sortedArrCheck(arr, 1));
-        // ArrayList<Integer> arr1 = new ArrayList<>();
-        // arr1.add(1);
-        // arr1.add(2);
-        // arr1.add(3);
-        // ArrayList<Integer> output = new ArrayList<>();
-        // subsetsArray(arr1, output, 0);
-        // int num = 5;
-        // System.out.println("Number of jumps to reach " + num + " are " +
-        // jumpStairs(num));
-        String s = "abc";
-        String outputString = "";
-        subsetString(s, outputString, 0);
-        permutationStr(s, 0);
+        // // int timesPower = 3;
+        // // int numForPower = 7;
+        // // int[] arr = { 1, 2, 3 }; // array for sort check.
+        // // // System.out.println(fib(10));
+        // // // System.out.println(printingSum(n));
+        // // // printNums(n);
+        // // // printNumsRev(n);
+        // // // printAlphaNums(str, n);
+        // // System.out.println("Power of " + numForPower + " times " + timesPower);
+        // // powOf2(timesPower, numForPower);
+        // // System.out.println(fastExpo(timesPower, numForPower));
+        // // System.out.println(sortedArrCheck(arr, 1));
+        // // ArrayList<Integer> arr1 = new ArrayList<>();
+        // // arr1.add(1);
+        // // arr1.add(2);
+        // // arr1.add(3);
+        // // ArrayList<Integer> output = new ArrayList<>();
+        // // subsetsArray(arr1, output, 0);
+        // // int num = 5;
+        // // System.out.println("Number of jumps to reach " + num + " are " +
+        // // jumpStairs(num));
+        // String s = "abc";
+        // String outputString = "";
+        // subsetString(s, outputString, 0);
+        // permutationStr(s, 0);
+        int n = 3;
+        towerOfHanoi(n,'A','B','C');
 
     }
 
