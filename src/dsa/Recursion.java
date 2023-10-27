@@ -153,6 +153,16 @@ public class Recursion {
         towerOfHanoi(n - 1, aux_rod, to_rod, from_rod);
     }
 
+    public static int testingWeirdFunc(int n) {
+        System.out.println(n);
+        if (n == 1) {
+            return 1;
+        }
+        System.out.println(n);
+        return n*testingWeirdFunc(n-1);
+
+    }
+
     public static void main(String[] args) {
 
         // String str[] = { "zero", "one", "two", "three", "four", "five", "six",
@@ -182,9 +192,9 @@ public class Recursion {
         // String outputString = "";
         // subsetString(s, outputString, 0);
         // permutationStr(s, 0);
-        int n = 3;
-        towerOfHanoi(n,'A','B','C');
-
+        // int n = 3;
+        // towerOfHanoi(n,'A','B','C');
+        System.out.println(testingWeirdFunc(5));
     }
 
 }

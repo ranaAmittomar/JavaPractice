@@ -6,6 +6,8 @@ import java.util.Scanner;
 
 public class QueueQues {
 
+    static Scanner sc = new Scanner(System.in);
+
     public static void quesFunctions() {
 
         Queue<Integer> queue = new LinkedList<>();
@@ -25,7 +27,6 @@ public class QueueQues {
     }
 
     public static void quesFuncUsingLoop() {
-        Scanner sc = new Scanner(System.in);
         Queue<Integer> q = new LinkedList<>();
         for (int i = 0; i < 4; i++) {
             int num = sc.nextInt();

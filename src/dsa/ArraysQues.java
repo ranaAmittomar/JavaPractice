@@ -156,10 +156,6 @@ public class ArraysQues {
         return arr;
     }
 
-    public void mergeSortedArray() {
-
-    }
-
     public static void isSorted() {
         int[] arr = { 1, 2, 3, 4, 5 };
 
@@ -183,8 +179,46 @@ public class ArraysQues {
         System.out.println("Unique Variable is: " + uniqueVar);
     }
 
+    public static int trapRainningWater(int[] arr, int arrSize) { // brute force
+        // COMMENTED OUT SOME PRINT STATEMENTS FOR DEBUGGING PROECESS AND LOOP
+        // UNDERSTANDING.
+        int res = 0;
+        int left, right;
+        for (int i = 1; i < arrSize - 1; i++) {
+            left = arr[i];
+            // System.out.println("inside I loop left val: " + left);
+            for (int j = 0; j < i; j++) {
+                left = Math.max(left, arr[j]);
+                // System.out.println("Inside left loop val " + left);
+            }
+            // System.out.println("Final left max val: " + left);
+            right = arr[i];
+            // System.out.println("inside I loop right val: " + right);
+
+            for (int j = i + 1; j < arrSize; j++) {
+                right = Math.max(right, arr[j]);
+                // System.out.println("inside right loop val: " + right);
+            }
+            // System.out.println("Final right max val: " + right);
+
+            res += Math.min(left, right) - arr[i];
+            System.out.println("Res value changing in every iteration: " + res);
+            // System.out.println("Left Max: " + left);
+            // System.out.println("Right Max: " + right);
+
+        }
+
+        return res;
+    }
+
     public static void main(String[] args) {
-        isSorted();
+        int[] arr = { 3, 0, 2, 0, 4 };
+        int n = arr.length;
+        System.out.println(trapRainningWater(arr, n));
+        // for (int i = 0; i < arr.length; i++) {
+        // System.out.print(arr[i] + " ");
+        // }
+        // isSorted();
     }
 
 }
