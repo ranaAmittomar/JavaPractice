@@ -17,7 +17,7 @@ public class MathsFuncs {
         } catch (ArithmeticException e) {
             System.err.println("Arithmetic Exception: " + e);
             // Perform an alternative action or calculation
-            return handleArithmeticError(num1, num2); //EXCEPTION
+            return handleArithmeticError(num1, num2); // EXCEPTION
         }
     }
 
@@ -32,6 +32,7 @@ public class MathsFuncs {
     public static void main(String[] args) {
         StaticFunctions staticFunctions = new StaticFunctions();
         System.out.println(staticFunctions.getSum(22) + PI); // from static func class
+        StaticFunctions.maxAndmin();
         int formatNum = 100000000;
         int num1 = 1;
         int num2 = 3;
