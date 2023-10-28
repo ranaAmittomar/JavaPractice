@@ -211,14 +211,39 @@ public class ArraysQues {
         return res;
     }
 
+    public static int trapingRainOptimised(int[] arr, int height) {
+        int[] leftMax = new int[height];
+        int[] rightMax = new int[height];
+        int result = 0;
+        leftMax[0] = 0;
+        rightMax[height - 1] = 0;
+        for (int i = 1; i < height - 1; i++) {
+            leftMax[i] = Math.max(leftMax[i], arr[i - 1]);
+        }
+        for (int i = height; i > 0; i--) {
+            rightMax[i] = Math.max(rightMax[i + 1], arr[i + 1]);
+        }
+
+        for (int i = 0; i < height; i++) {
+            int minHeight = Math.min(leftMax[i], rightMax[i]);
+            if (minHeight >= 0) {
+                result += minHeight - arr[i];
+            } else {
+                return -1;
+            }
+        }
+        return result;
+    }
+
     public static void main(String[] args) {
         int[] arr = { 3, 0, 2, 0, 4 };
         int n = arr.length;
-        System.out.println(trapRainningWater(arr, n));
+        // System.out.println(trapRainningWater(arr, n));
         // for (int i = 0; i < arr.length; i++) {
         // System.out.print(arr[i] + " ");
         // }
         // isSorted();
+        System.out.println(trapingRainOptimised(arr, n));
     }
 
 }
