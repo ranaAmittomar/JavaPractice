@@ -66,6 +66,24 @@ public class BinarySearchQues {
         return right;
     }
 
+    public static void reverseArrayByTwoPoint() {
+
+        int[] arr = { 1, 2, 3, 4, 5, 6 };
+        int st = 0;
+        int end = arr.length - 1;
+        while (st <= end) {
+            int temp = arr[st];
+            arr[st] = arr[end];
+            arr[end] = temp;
+            st++;
+            end--;
+        }
+        for (int x : arr) {
+            System.out.print(x + " ");
+        }
+
+    }
+
     public static void main(String[] args) {
         int[] arr = { 1, 2, 4, 5, 6, 7, 9 };
         int target = 9;
@@ -73,8 +91,8 @@ public class BinarySearchQues {
         int target2 = 2;
         System.out.println(nonRepeatedSearch(arr, target));
         System.out.println(repeatedNumsSearch(arr1, target2));
-        System.out.println(right_bound(arr1,target2));
-
+        System.out.println(right_bound(arr1, target2));
+        reverseArrayByTwoPoint();
     }
 
 }
