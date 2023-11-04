@@ -1,6 +1,6 @@
 package algorithmBased;
 
-class ListNode {
+class ListNode { 
     int data;
     ListNode next;
 
