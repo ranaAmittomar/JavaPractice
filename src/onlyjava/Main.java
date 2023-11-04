@@ -57,18 +57,34 @@ public class Main {
 
     public static void sumOfADigit() {
         // with debugging print statements.
-        int num = 256;
+        int num = 12312;
         int add = 0;
+        int count = 0;
         while (num > 0) {
             System.out.println("now add is : " + add);
+            count++;
+            System.out.println("Now count is : " + count);
             int n = num % 10;
             System.out.println("Value of n: " + n);
             add += n;
-            System.out.println("end of while add is : " + add);
+            System.out.println("End of while add is : " + add);
             num = num / 10;
 
         }
-        System.out.println("Final outputof add is : " + add);
+        System.out.println("Final output of add is : " + add);
+        System.out.println("Number of digits: " + count);
+    }
+
+    public static void printSum() {
+        // sum greater than certain value and also odds.
+        int sum = 0;
+        for (int i = 1; i <= 100; i++) {
+            if (i % 2 != 0 && i > 50) {
+                sum += i;
+            }
+        }
+        System.out.println(sum);
+
     }
 
     public static void main(String[] args) {
@@ -76,6 +92,7 @@ public class Main {
         // System.out.println();
         // System.out.println(isEven(11));
         // multiPleOfNum(50, 5, 10);
-        sumOfADigit();
+        // sumOfADigit();
+        printSum();
     }
 }
