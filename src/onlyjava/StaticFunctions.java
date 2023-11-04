@@ -25,6 +25,12 @@ public class StaticFunctions {
         return n + RANDOM_NUM + count();
     }
 
+    public static void maxAndmin() {
+        int max_num = Integer.MAX_VALUE;
+        int min_num = Integer.MIN_VALUE;
+        System.out.println("Max_num " + max_num + " Min_Num " + min_num);
+    }
+
     public double getSum(int num) { // CALLED IN MATHSFUNCS.JAVA class.
         return addNum(num);
     }
