@@ -55,10 +55,27 @@ public class Main {
 
     }
 
+    public static void sumOfADigit() {
+        // with debugging print statements.
+        int num = 256;
+        int add = 0;
+        while (num > 0) {
+            System.out.println("now add is : " + add);
+            int n = num % 10;
+            System.out.println("Value of n: " + n);
+            add += n;
+            System.out.println("end of while add is : " + add);
+            num = num / 10;
+
+        }
+        System.out.println("Final outputof add is : " + add);
+    }
+
     public static void main(String[] args) {
-        swapNumbers(5, 6);
-        System.out.println();
-        System.out.println(isEven(11));
-        multiPleOfNum(50, 5, 10);
+        // swapNumbers(5, 6);
+        // System.out.println();
+        // System.out.println(isEven(11));
+        // multiPleOfNum(50, 5, 10);
+        sumOfADigit();
     }
 }
