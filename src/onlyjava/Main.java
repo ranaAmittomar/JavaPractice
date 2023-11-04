@@ -1,8 +1,5 @@
 package onlyjava;
 
-import dsa.ArraysQues;
-
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
@@ -34,8 +31,34 @@ public class Main {
         } while (x == 1);
     }
 
+    public static boolean isEven(int n) {
+        if (n == 0) {
+            System.out.print("Number is zero: ");
+            return false;
+        }
+        if (n % 2 == 0) {
+            System.out.print("Number is even: ");
+            return true;
+        } else {
+            System.out.print("Number is odd: ");
+            return false;
+        }
+
+    }
+
+    public static void multiPleOfNum(int tillSer, int ofMult, int fromNum) { // multiple of a number from-till
+        for (int i = fromNum; i <= tillSer; i++) {
+            if (i % ofMult == 0) {
+                System.out.println(i);
+            }
+        }
+
+    }
+
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
         swapNumbers(5, 6);
+        System.out.println();
+        System.out.println(isEven(11));
+        multiPleOfNum(50, 5, 10);
     }
 }
