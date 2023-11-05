@@ -235,6 +235,26 @@ public class ArraysQues {
         return result;
     }
 
+    public static void arrayMethodsNew() {
+        int[] arr = new int[2];
+        Arrays.fill(arr, 1);
+        for (int i : arr) {
+            System.out.print(i + " ");
+        }
+    }
+
+    public static void arrayMethodsNew2D() {
+        int[][] arr = new int[4][4];
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr[i].length; j++) {
+                arr[i][j] = 1;
+                System.out.print(arr[i][j] + " ");
+            }
+            System.out.println();
+        }
+
+    }
+
     public static void main(String[] args) {
         int[] arr = { 3, 0, 2, 0, 4 };
         int n = arr.length;
@@ -243,7 +263,9 @@ public class ArraysQues {
         // System.out.print(arr[i] + " ");
         // }
         // isSorted();
-        System.out.println(trapingRainOptimised(arr, n));
+        // System.out.println(trapingRainOptimised(arr, n));
+        // arrayMethodsNew();
+        arrayMethodsNew2D();
     }
 
 }
