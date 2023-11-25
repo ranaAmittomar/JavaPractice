@@ -87,12 +87,26 @@ public class Main {
 
     }
 
+    public static void tryingExceptionFuncs() {
+        int a = 19;
+        int b = 0;
+        try {
+            int z = a % b;
+            System.out.println(z);
+        } catch (Exception e) { //this only execute if try block fails.
+            System.out.println(e);
+        } finally {//this will always execute.
+            System.out.println("Finally block");
+        }
+    }
+
     public static void main(String[] args) {
         // swapNumbers(5, 6);
         // System.out.println();
         // System.out.println(isEven(11));
         // multiPleOfNum(50, 5, 10);
         // sumOfADigit();
-        printSum();
+        // printSum();
+        tryingExceptionFuncs();
     }
 }
