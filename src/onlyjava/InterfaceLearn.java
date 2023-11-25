@@ -32,8 +32,8 @@ class Dev implements InterfaceLearn, anotherInterface {
 
 
     public void output() {
-        if (sal <= age) {
-            System.out.println("Your age and salary are equal.");
+        if (sal < age) {
+            System.out.println("Your age is greater than your salary.");
         } else
             System.out.println("Hello " + name + " salary is " + sal);
         System.out.println(InterfaceLearn.age); //we can use interface variable directly without object creating as they are Static in interface.
