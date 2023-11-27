@@ -1,6 +1,9 @@
 package dsa;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
+import java.util.Map.Entry;
 
 public class StringsQues {
 
@@ -56,6 +59,33 @@ public class StringsQues {
         System.out.println(result);
     }
 
+    public static void findingSubstring() {
+        String s = "abceghsjad";
+        int windowSize = 2;
+        int strLength = s.length();
+        for (int i = 0; i < strLength - windowSize + 1; i++) {
+            String subStr = s.substring(i, i + windowSize);
+            System.out.println(subStr);
+        }
+    }
+
+    public static void findingSubstringUsingHashmap() {
+        String s = "abceghsjad";
+        int strLength = s.length();
+        int windowSize = 2;
+        Map<String, Integer> subStrFreqMap = new HashMap<>();
+        for (int i = 0; i < strLength - windowSize; i++) {
+            String subString = s.substring(i, i + windowSize);
+            subStrFreqMap.put(subString, subStrFreqMap.getOrDefault(subString, 0) + 1);
+            System.out.println(subString);
+        }
+        System.out.println("Occurence of substring: ");
+        for (Entry<String, Integer> entry : subStrFreqMap.entrySet()) {
+            // print occurence of every substring.
+            System.out.println(entry.getKey() + ": " + entry.getValue());
+        }
+    }
+
     public static void main(String[] args) {
         // Scanner input = new Scanner(System.in);
         // while (true) {
@@ -81,7 +111,9 @@ public class StringsQues {
         // ensures there won't
         // // do any memory leakage.
         // }
-        addBinary();
+        // addBinary();
+        // findingSubstring();
+        findingSubstringUsingHashmap();
 
     }
 }
