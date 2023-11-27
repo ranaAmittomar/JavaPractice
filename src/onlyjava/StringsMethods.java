@@ -100,6 +100,16 @@ public class StringsMethods {
 
     }
 
+    public static void substringWorking() {
+        String str = "Amit Tomar";
+        int windowSize = 3;
+        String withoutSpaceString = str.replaceAll("\\s", "");
+        for (int i = 0; i < withoutSpaceString.length() - windowSize; i++) {
+            String subString = withoutSpaceString.substring(i, i + windowSize);
+            System.out.println(subString);
+        }
+    }
+
     public static void main(String[] args) {
         // loopingString();
         // substrLoopAndCheck();
@@ -107,7 +117,8 @@ public class StringsMethods {
         // equalsString();
         // stringAppearConvert();
         // sepratingBySpace();
-        reverseString();
+        // reverseString();
+        substringWorking();
     }
 
 }
