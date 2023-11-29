@@ -113,6 +113,24 @@ public class HashMapFuncs {
         System.out.println("Done.");
     }
 
+    public static boolean isValidAnagram() {
+        String s = "anagram";
+        String t = "nagaram";
+        if (s.length() != t.length()) {
+            return false;
+        }
+        int[] char_count = new int[26];
+        for (int i = 0; i < s.length(); i++) {
+            char_count[s.charAt(i) - 'a']++;
+            char_count[t.charAt(i) - 'a']--;
+        }
+        for (int count : char_count) {
+            if (count != 0)
+                return false;
+        }
+        return true;
+    }
+
     /**
      * The entry point of the program, which calls the countingStrings() method,and
      * other methods.
@@ -121,7 +139,8 @@ public class HashMapFuncs {
         // countingNums();
         // hashMapFuncs();
         // countingStrings();
-        isomorphicString();
+        System.out.println(isValidAnagram());
+        // isomorphicString();
         // tryingHashMapInLoops();
 
     }
