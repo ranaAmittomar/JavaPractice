@@ -5,6 +5,13 @@ import java.util.Map;
 import java.util.Scanner;
 import java.util.Map.Entry;
 
+/**
+ * The `StringsQues` class contains various methods related to string
+ * manipulation and analysis.
+ * It includes methods for splitting a string, checking if a string is a
+ * palindrome, converting lowercase characters to uppercase,
+ * adding binary numbers, and finding substrings in a string.
+ */
 public class StringsQues {
 
     public static void strFuncs() {
@@ -75,9 +82,9 @@ public class StringsQues {
         int windowSize = 2;
         Map<String, Integer> subStrFreqMap = new HashMap<>();
         for (int i = 0; i < strLength - windowSize; i++) {
-            String subString = s.substring(i, i + windowSize);
-            subStrFreqMap.put(subString, subStrFreqMap.getOrDefault(subString, 0) + 1);
-            System.out.println(subString);
+            String subString = s.substring(i, i + windowSize); // slicing the substring for windowsize.
+            subStrFreqMap.put(subString, subStrFreqMap.getOrDefault(subString, 0) + 1); // count the occurence.
+            System.out.println(subString); // only printing the substring.
         }
         System.out.println("Occurence of substring: ");
         for (Entry<String, Integer> entry : subStrFreqMap.entrySet()) {
@@ -87,32 +94,36 @@ public class StringsQues {
     }
 
     public static void main(String[] args) {
-        // Scanner input = new Scanner(System.in);
-        // while (true) {
-        // System.out.print("Enter a string (or 'q' to quit): ");
-        // String s = input.nextLine();
+        /*
+         * 
+         * Scanner input = new Scanner(System.in);
+         * while (true) {
+         * System.out.print("Enter a string (or 'q' to quit): ");
+         * String s = input.nextLine();
+         * 
+         * if (s.equalsIgnoreCase("q")) {
+         * System.out.println("Exiting the program.");
+         * break; // Exit the loop if the user enters 'q'
+         * }
+         * 
+         * if (isPalindrome(s)) {
+         * System.out.println("It's a palindrome!");
+         * } else {
+         * System.out.println("It's not a palindrome.");
+         * }
+         * }
+         * char char1 = input.next().charAt(0);
+         * System.out.println("The character of " + char1 + " is " + convert(char1));
+         * strFuncs();
+         * 
+         * input.close(); // it's best practice to close the I/O method when done,it
+         * ensures there won't
+         * // do any memory leakage.
+         * }
+         * addBinary();
+         * findingSubstring();
+         */
 
-        // if (s.equalsIgnoreCase("q")) {
-        // System.out.println("Exiting the program.");
-        // break; // Exit the loop if the user enters 'q'
-        // }
-
-        // if (isPalindrome(s)) {
-        // System.out.println("It's a palindrome!");
-        // } else {
-        // System.out.println("It's not a palindrome.");
-        // }
-        // }
-        // char char1 = input.next().charAt(0);
-        // System.out.println("The character of " + char1 + " is " + convert(char1));
-        // strFuncs();
-
-        // input.close(); // it's best practice to close the I/O method when done,it
-        // ensures there won't
-        // // do any memory leakage.
-        // }
-        // addBinary();
-        // findingSubstring();
         findingSubstringUsingHashmap();
 
     }
