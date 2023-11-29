@@ -93,6 +93,26 @@ public class HashMapFuncs {
 
     }
 
+    public static void isomorphicString() { // function to check if the string is Isomorphic or not.
+        int[] map1 = new int[200];
+        int[] map2 = new int[200];
+        String s = "foo";
+        String t = "bar";
+        // edge case
+        if (s.length() != t.length()) {
+            System.out.println("Not possible.");
+        }
+
+        for (int i = 0; i < s.length(); i++) {
+            if (map1[s.charAt(i)] != map2[t.charAt(i)]) {
+                System.out.println("Elements are different.");
+            }
+            map1[s.charAt(i)] = i + 1;
+            map2[t.charAt(i)] = i + 1;
+        }
+        System.out.println("Done.");
+    }
+
     /**
      * The entry point of the program, which calls the countingStrings() method,and
      * other methods.
@@ -101,7 +121,8 @@ public class HashMapFuncs {
         // countingNums();
         // hashMapFuncs();
         // countingStrings();
-        tryingHashMapInLoops();
+        isomorphicString();
+        // tryingHashMapInLoops();
 
     }
 }
