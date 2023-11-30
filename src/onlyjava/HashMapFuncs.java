@@ -1,6 +1,7 @@
 package onlyjava;
 
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 import java.util.Map.Entry;
@@ -131,6 +132,49 @@ public class HashMapFuncs {
         return true;
     }
 
+    public static boolean isHappyNumber() {
+
+        int n = 61;
+        Set<Integer> usedNumber = new HashSet<>();
+        while (true) {
+            int sum = 0;
+            sum += Math.pow(n % 10, 2.0);
+            n = n / 10;
+            if (n == 1)
+                return true;
+            n = sum;
+            if (usedNumber.contains(n))
+                return false;
+            usedNumber.add(n);
+        }
+
+    }
+
+    public static boolean containsDuplicate() {
+        int[] arr = { 1, 2, 3, 2 };
+        Set<Integer> presentInteger = new HashSet<>();
+        for (int i = 0; i < arr.length; i++) {
+
+            if (presentInteger.contains(arr[i]))
+                return true;
+            presentInteger.add(arr[i]);
+        }
+        return false;
+    }
+
+    public static boolean containsDuplicateII() {
+        int[] nums = { 1, 0, 1, 1 };
+        int k = 3;
+        Map<Integer, Integer> map = new HashMap<>();
+        for (int i = 0; i < nums.length; i++) {
+            int in = nums[i];
+            if (map.containsKey(in) && i - map.get(in) <= k)
+                return true;
+            map.put(in, i);
+        }
+        return false;
+    }
+
     /**
      * The entry point of the program, which calls the countingStrings() method,and
      * other methods.
@@ -142,6 +186,9 @@ public class HashMapFuncs {
         System.out.println(isValidAnagram());
         // isomorphicString();
         // tryingHashMapInLoops();
+        System.out.println("Happy Num: " + isHappyNumber());
+        System.out.println("Contains Duplicate: " + containsDuplicate());
+        System.out.println("contains DuplicateII : " + containsDuplicateII());
 
     }
 }
