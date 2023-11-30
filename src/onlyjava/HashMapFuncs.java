@@ -175,6 +175,34 @@ public class HashMapFuncs {
         return false;
     }
 
+    public static int longestLenConsNum() {
+        int[] arr = { 0, 1, 6, -1, 2, -2, 3, 4, 5, 6, 7, 8 };
+        int longestLen = 0;
+        Map<Integer, Boolean> exploredMap = new HashMap<>();
+        for (int num : arr) {
+            exploredMap.put(num, Boolean.FALSE);
+        }
+        for (int num : arr) {
+            int currentLen = 1;
+            // forward number check
+            int nextNum = num + 1;
+            while (exploredMap.containsKey(nextNum) && exploredMap.get(nextNum) == false) {
+                currentLen++;
+                exploredMap.put(nextNum, Boolean.TRUE);
+                nextNum++;
+            }
+            // backward number check.
+            int prevNum = num - 1;
+            while (exploredMap.containsKey(prevNum) && exploredMap.get(prevNum) == false) {
+                currentLen++;
+                exploredMap.put(prevNum, Boolean.TRUE);
+                prevNum--;
+            }
+            longestLen = Math.max(longestLen, currentLen);
+        }
+        return longestLen;
+    }
+
     /**
      * The entry point of the program, which calls the countingStrings() method,and
      * other methods.
@@ -189,6 +217,7 @@ public class HashMapFuncs {
         System.out.println("Happy Num: " + isHappyNumber());
         System.out.println("Contains Duplicate: " + containsDuplicate());
         System.out.println("contains DuplicateII : " + containsDuplicateII());
+        System.out.println("Longest Number Check: " + longestLenConsNum());
 
     }
 }
