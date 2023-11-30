@@ -35,6 +35,13 @@ public class MathsFuncs {
         System.out.println("Log base 10: " + Math.log10(n)); // base 10
     }
 
+    public static void moreMathsFuncs() {
+        int n = 4;
+        System.out.println("Power of 5 for 10 is : " + Math.pow(n, 2));
+        System.out.println("Exponential of 10 is : " + Math.exp(1));
+        System.out.println("Square root of " + n + " is:" + Math.sqrt(n));
+    }
+
     public static void main(String[] args) {
         /*
          * StaticFunctions staticFunctions = new StaticFunctions();
@@ -56,5 +63,6 @@ public class MathsFuncs {
          * System.out.println(divideNum(2, 0));
          */
         logFuncs();
+        moreMathsFuncs();
     }
 }
