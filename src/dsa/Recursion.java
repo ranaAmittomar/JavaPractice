@@ -1,6 +1,7 @@
 package dsa;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 /**
  * The `Recursion` class contains various recursive methods that demonstrate
@@ -309,11 +310,23 @@ public class Recursion {
         if (arr[0] == key)
             return true;
         else {
-            int[] subArray = new int[size - 1];
+            int[] subArray = new int[size - 1]; // creating subarray..
             System.arraycopy(arr, 1, subArray, 0, size - 1);
             return linearSearch(subArray, size - 1, key);
         }
 
+    }
+
+    public static boolean linearSearchNew(int[] arr, int size, int key) {
+        printArrayLinearSearch(arr, size);
+        if (size == 0)
+            return false;
+        if (arr[0] == key)
+            return true;
+        else {
+            int[] subArray = Arrays.copyOfRange(arr, 1, size);
+            return linearSearchNew(subArray, size - 1, key);
+        }
     }
 
     private static void printArrayLinearSearch(int[] arr, int size) {
@@ -322,6 +335,20 @@ public class Recursion {
             System.out.print(n + " ");
         }
         System.out.println();
+    }
+
+    public static boolean binarySearchRec(int[] arr, int start, int end, int key) { // binary search using recursion.
+        if (start > end)
+            return false; // when element not found.
+        int mid = start + (end - start) / 2;
+        if (arr[mid] == key)
+            return true; // when element found.
+        if (arr[mid] < key) {
+            return binarySearchRec(arr, mid + 1, end, key);
+        } else {
+            return binarySearchRec(arr, start, mid - 1, key);
+        }
+
     }
 
     public static void main(String[] args) {
@@ -359,9 +386,11 @@ public class Recursion {
         int[] arr = { 1, 2, 3 }; // sorted array.
         int size = arr.length;
         int key = 3;
-        System.out.println(isSortedArray(arr, size));
-        System.out.println(arraySum(arr, size));
-        System.out.println(linearSearch(arr, size, key));
+        // System.out.println(isSortedArray(arr, size));
+        // System.out.println(arraySum(arr, size));
+        // System.out.println(linearSearch(arr, size, key));
+        // System.out.println(linearSearchNew(arr, size, key));
+        System.out.println(binarySearchRec(arr, 0, size, key));
     }
 
 }
