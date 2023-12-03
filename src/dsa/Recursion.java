@@ -379,6 +379,20 @@ public class Recursion {
         }
     }
 
+    public static int powerOfAOnB(int a, int b) {
+        if (b == 0)
+            return 1;
+        if (b == 1)
+            return a;
+        int ans = powerOfAOnB(a, b / 2);
+        if (b % 2 == 0) {
+            return ans * ans;
+        } else {
+            return a * ans * ans;
+        }
+
+    }
+
     public static void main(String[] args) {
 
         // String str[] = { "zero", "one", "two", "three", "four", "five", "six",
@@ -416,18 +430,21 @@ public class Recursion {
         int key = 3;
         String s = "121";
         char[] charArray = s.toCharArray();
+        int a = 2, b = 10;
         // System.out.println(isSortedArray(arr, size));
         // System.out.println(arraySum(arr, size));
         // System.out.println(linearSearch(arr, size, key));
         // System.out.println(linearSearchNew(arr, size, key));
         // System.out.println(binarySearchRec(arr, 0, size, key));
         // reverseString(charArray, 0, s.length() - 1);
-        boolean chekcPalindrom = isPalindromeRecursion(s, 0, s.length() - 1);
-        if (chekcPalindrom) {
-            System.out.println("It's palindrome.");
-        } else {
-            System.out.println("Not a palindrome.");
-        }
+        // boolean chekcPalindrom = isPalindromeRecursion(s, 0, s.length() - 1);
+        // if (chekcPalindrom) {
+        // System.out.println("It's palindrome.");
+        // } else {
+        // System.out.println("Not a palindrome.");
+        // }
+
+        System.out.println("Answer is : " + powerOfAOnB(a, b));
     }
 
 }
