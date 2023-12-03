@@ -113,8 +113,7 @@ import java.util.Arrays;
  * System.out.println(sumResult); // Output: 6
  */
 public class Recursion {
-
-    public static int fib(int n) {
+  public static int fib(int n) {
 
         int[] memo = new int[1000];
         if (n <= 1) {
@@ -351,6 +350,23 @@ public class Recursion {
 
     }
 
+    // REVERSING THE STRING USING RECURSION..
+    public static void reverseString(char[] charArray, int start, int end) {
+
+        // base case.
+        if (start >= end) {
+            String s = new String(charArray);
+            System.out.println(s);
+            return;
+        }
+        char temp = charArray[start];
+        charArray[start] = charArray[end];
+        charArray[end] = temp;
+
+        // Recursive call to reverse the rest of the string
+        reverseString(charArray, start + 1, end - 1);
+    }
+
     public static void main(String[] args) {
 
         // String str[] = { "zero", "one", "two", "three", "four", "five", "six",
@@ -386,11 +402,14 @@ public class Recursion {
         int[] arr = { 1, 2, 3 }; // sorted array.
         int size = arr.length;
         int key = 3;
+        String s = "amit";
+        char[] charArray = s.toCharArray();
         // System.out.println(isSortedArray(arr, size));
         // System.out.println(arraySum(arr, size));
         // System.out.println(linearSearch(arr, size, key));
         // System.out.println(linearSearchNew(arr, size, key));
-        System.out.println(binarySearchRec(arr, 0, size, key));
+        // System.out.println(binarySearchRec(arr, 0, size, key));
+        reverseString(charArray, 0, s.length() - 1);
     }
 
 }
