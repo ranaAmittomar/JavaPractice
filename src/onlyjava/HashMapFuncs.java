@@ -57,7 +57,7 @@ public class HashMapFuncs {
         }
 
         for (Entry<Integer, Integer> entry : numCount.entrySet()) {
-            System.out.println("Number " + entry.getKey() + " occurs " + entry.getValue() + " times.");
+            System.out.println(entry.getKey() + "" + entry.getValue() + "s");
         }
     }
 
@@ -208,16 +208,16 @@ public class HashMapFuncs {
      * other methods.
      */
     public static void main(String[] args) {
-        // countingNums();
+        countingNums();
         // hashMapFuncs();
         // countingStrings();
-        System.out.println(isValidAnagram());
-        // isomorphicString();
-        // tryingHashMapInLoops();
-        System.out.println("Happy Num: " + isHappyNumber());
-        System.out.println("Contains Duplicate: " + containsDuplicate());
-        System.out.println("contains DuplicateII : " + containsDuplicateII());
-        System.out.println("Longest Number Check: " + longestLenConsNum());
+        // System.out.println(isValidAnagram());
+        // // isomorphicString();
+        // // tryingHashMapInLoops();
+        // System.out.println("Happy Num: " + isHappyNumber());
+        // System.out.println("Contains Duplicate: " + containsDuplicate());
+        // System.out.println("contains DuplicateII : " + containsDuplicateII());
+        // System.out.println("Longest Number Check: " + longestLenConsNum());
 
     }
 }

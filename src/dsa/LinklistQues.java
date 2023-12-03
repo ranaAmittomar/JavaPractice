@@ -1,6 +1,5 @@
 package dsa;
 
-
 class Node {
     int data;
     Node next;
@@ -11,12 +10,11 @@ class Node {
     }
 }
 
-
 class LinklistQues {
 
     Node head;
 
-    public LinklistQues() {
+    public LinklistQues() { // default constructor.
         head = null;
     }
 
@@ -41,7 +39,6 @@ class LinklistQues {
         }
         System.out.println("null");
     }
-    
 
     public static void main(String[] args) {
         LinklistQues ll = new LinklistQues();
