@@ -113,7 +113,7 @@ import java.util.Arrays;
  * System.out.println(sumResult); // Output: 6
  */
 public class Recursion {
-  public static int fib(int n) {
+    public static int fib(int n) {
 
         int[] memo = new int[1000];
         if (n <= 1) {
@@ -367,6 +367,18 @@ public class Recursion {
         reverseString(charArray, start + 1, end - 1);
     }
 
+    public static boolean isPalindromeRecursion(String s, int start, int end) { // palindrome check using recursion.
+        char[] str = s.toCharArray();
+        if (start > end) {
+            return true;
+        }
+        if (str[start] != str[end])
+            return false;
+        else {
+            return isPalindromeRecursion(s, start + 1, end - 1);
+        }
+    }
+
     public static void main(String[] args) {
 
         // String str[] = { "zero", "one", "two", "three", "four", "five", "six",
@@ -402,14 +414,20 @@ public class Recursion {
         int[] arr = { 1, 2, 3 }; // sorted array.
         int size = arr.length;
         int key = 3;
-        String s = "amit";
+        String s = "121";
         char[] charArray = s.toCharArray();
         // System.out.println(isSortedArray(arr, size));
         // System.out.println(arraySum(arr, size));
         // System.out.println(linearSearch(arr, size, key));
         // System.out.println(linearSearchNew(arr, size, key));
         // System.out.println(binarySearchRec(arr, 0, size, key));
-        reverseString(charArray, 0, s.length() - 1);
+        // reverseString(charArray, 0, s.length() - 1);
+        boolean chekcPalindrom = isPalindromeRecursion(s, 0, s.length() - 1);
+        if (chekcPalindrom) {
+            System.out.println("It's palindrome.");
+        } else {
+            System.out.println("Not a palindrome.");
+        }
     }
 
 }
