@@ -418,19 +418,19 @@ public class Recursion {
         // // int num = 5;
         // // System.out.println("Number of jumps to reach " + num + " are " +
         // // jumpStairs(num));
-        // String s = "abc";
+        String s = "abc";
         // String outputString = "";
         // subsetString(s, outputString, 0);
-        // permutationStr(s, 0);
+        permutationStr(s, 0);
         // int n = 3;
         // towerOfHanoi(n,'A','B','C');
-        // System.out.println(testingWeirdFunc(5));
-        int[] arr = { 1, 2, 3 }; // sorted array.
-        int size = arr.length;
-        int key = 3;
-        String s = "121";
-        char[] charArray = s.toCharArray();
-        int a = 2, b = 10;
+        // // System.out.println(testingWeirdFunc(5));
+        // int[] arr = { 1, 2, 3 }; // sorted array.
+        // int size = arr.length;
+        // int key = 3;
+        // String s = "121";
+        // char[] charArray = s.toCharArray();
+        // int a = 2, b = 10;
         // System.out.println(isSortedArray(arr, size));
         // System.out.println(arraySum(arr, size));
         // System.out.println(linearSearch(arr, size, key));
@@ -444,7 +444,7 @@ public class Recursion {
         // System.out.println("Not a palindrome.");
         // }
 
-        System.out.println("Answer is : " + powerOfAOnB(a, b));
+        // System.out.println("Answer is : " + powerOfAOnB(a, b));
     }
 
 }
