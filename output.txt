@@ -1,0 +1,6 @@
+Writing from the java class
+This is another line.This is in the same line
+Amit
+Shweta
+Meena
+Tomar
