@@ -93,6 +93,73 @@ public class StringsQues {
         }
     }
 
+    // converting lower half of string in lower case and other half in upper case.
+    public static void stringConversion() { // it's costly because of loop.
+        String str = "This is Java This is Java";
+        int mid = str.length() / 2;
+        String lowerCaseString = "";
+        String upperCaseString = "";
+        for (int i = 0; i < str.length(); i++) {
+            if (i < mid) {
+                lowerCaseString = lowerCaseString + str.toLowerCase().charAt(i);
+            } else if (i > mid) {
+                upperCaseString = upperCaseString + str.toUpperCase().charAt(i);
+            }
+        }
+        System.out.println(lowerCaseString);
+        System.out.println(upperCaseString);
+    }
+
+    public static void stringConversionOptimised() { // it's efficient because it's not using any loop.
+        String str = "This is Java This is Java";
+        int mid = str.length() / 2;
+        String lowerCaseString = str.substring(0, mid).toLowerCase();
+        String upperCaseString = str.substring(mid + 1, str.length()).toUpperCase();
+        System.out.println(lowerCaseString);
+        System.out.println(upperCaseString);
+    }
+
+    public static void stringLargestOccur() {
+        String str = "6777133339";
+        Map<Character, Integer> map = new HashMap<>();
+
+        // Count the frequency of each character
+        for (int i = 0; i < str.length(); i++) {
+            map.put(str.charAt(i), map.getOrDefault(str.charAt(i), 0) + 1);
+        }
+
+        char firstMaxChar = '\0'; // Placeholder for the character with the highest frequency
+        int firstMaxFreq = 0; // Variable to store the highest frequency
+        char secondMaxChar = '\0'; // Placeholder for the character with the second highest frequency
+        int secondMaxFreq = 0; // Variable to store the second highest frequency
+
+        // Iterate over the map entries to find the two characters with the highest
+        // frequencies
+        for (Entry<Character, Integer> entry : map.entrySet()) {
+            int frequency = entry.getValue();
+            char currentChar = entry.getKey();
+
+            if (frequency > firstMaxFreq) {
+                // Move the current max to the second max
+                secondMaxFreq = firstMaxFreq;
+                secondMaxChar = firstMaxChar;
+
+                // Update the new max
+                firstMaxFreq = frequency;
+                firstMaxChar = currentChar;
+            } else if (frequency > secondMaxFreq) {
+                // Update the second max
+                secondMaxFreq = frequency;
+                secondMaxChar = currentChar;
+            }
+        }
+
+        // Pick the larger of the two characters with the highest frequencies
+        char result = (firstMaxChar > secondMaxChar) ? firstMaxChar : secondMaxChar;
+
+        System.out.println("The character with the higher frequency between the two highest frequencies is: " + result);
+    }
+
     public static void main(String[] args) {
         /*
          * 
@@ -124,7 +191,10 @@ public class StringsQues {
          * findingSubstring();
          */
 
-        findingSubstringUsingHashmap();
+        // findingSubstringUsingHashmap();
+        // stringConversion();
+        // stringConversionOptimised();
+        stringLargestOccur();
 
     }
 }
