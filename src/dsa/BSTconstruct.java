@@ -19,9 +19,9 @@ public class BSTconstruct {
             root = new Node(val);
             return root;
         }
-        if (root.data > val)
+        if (val < root.data) // place in left node..
             root.left = insert(root.left, val);
-        else
+        else// place in right node
             root.right = insert(root.right, val);
         return root;
     }
@@ -51,18 +51,42 @@ public class BSTconstruct {
         preOrder(root.right);
     }
 
-    
+    public static void minVal(Node root) {
+        Node temp = root;
+        while (temp.left != null) {
+            temp = temp.left;
+        }
+        System.out.println("Min value:- " + temp.data);
+    }
+
+    public static void maxValue(Node root) {
+        Node temp = root;
+        while (temp.right != null) {
+            temp = temp.right;
+        }
+        System.out.println("Max value: " + temp.data);
+    }
+
     public static void gettingInput() {
-        int[] binaryArr = {2, 1, 4, 454, 234, 5};
+        int[] binaryArr = { 2, 1, 4, 454, 234, 5 };
         Node root = null;
         for (int i = 0; i < binaryArr.length; i++) {
             root = insert(root, binaryArr[i]);
         }
+        System.out.print("Pre order :- ");
         preOrder(root);
         System.out.println();
+        System.out.print("In order :- ");
         inOrder(root);
         System.out.println();
+        System.out.print("Post order :- ");
         postOrder(root);
         System.out.println();
+        minVal(root);
+        maxValue(root);
+    }
+
+    public static void main(String[] args) {
+        gettingInput();
     }
 }
