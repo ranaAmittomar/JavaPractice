@@ -203,12 +203,31 @@ public class HashMapFuncs {
         return longestLen;
     }
 
+    public static void askingNumIndex() {
+        int[] ar = { 1, 2, 3, 4, 5, 6, 7, 8 };
+        int nu = 5;
+        HashMap<Integer, Integer> map = new HashMap<>();
+        for (int i = 0; i < ar.length; i++) {
+            map.put(i, ar[i]);
+        }
+        System.out.println(map.get(2));
+        if (map.containsValue(nu)) {
+            for (int index : map.keySet()) {
+                if (map.get(index) == nu) {
+                    System.out.println("Present at index :- " + index);
+                }
+            }
+        } else {
+            System.out.println("false");
+        }
+    }
+
     /**
      * The entry point of the program, which calls the countingStrings() method,and
      * other methods.
      */
     public static void main(String[] args) {
-        countingNums();
+        // countingNums();
         // hashMapFuncs();
         // countingStrings();
         // System.out.println(isValidAnagram());
@@ -218,6 +237,6 @@ public class HashMapFuncs {
         // System.out.println("Contains Duplicate: " + containsDuplicate());
         // System.out.println("contains DuplicateII : " + containsDuplicateII());
         // System.out.println("Longest Number Check: " + longestLenConsNum());
-
+        askingNumIndex();
     }
 }
