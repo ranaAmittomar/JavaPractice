@@ -76,6 +76,29 @@ public class MatrixQues {
         System.out.println("Col len: " + colLen);
     }
 
+    public static void matrixTranspose() {
+        int[][] matrix = {
+                { 0, 1, 2, 0 },
+                { 3, 4, 0, 2 },
+                { 1, 3, 1, 5 },
+                { 8, 7, 6, 9 } };
+        int row = matrix.length;
+        int col = matrix[0].length;
+        int[][] ans = new int[row][col];
+        for (int i = 0; i < row; i++) {
+            for (int j = 0; j < col; j++) {
+                ans[j][i] = matrix[i][j];
+            }
+        }
+        for (int i = 0; i < row; i++) {
+            for (int j = 0; j < col; j++) {
+                System.out.print(ans[i][j] + " ");
+            }
+            System.out.println();
+        }
+
+    }
+
     public static void setZeroInMatrix() {
         int[][] matrix = {
                 { 0, 1, 2, 0 },
@@ -146,7 +169,8 @@ public class MatrixQues {
 
     public static void main(String[] args) {
         // columnSum();
-        setZeroInMatrix();
+        // setZeroInMatrix();
         // sizeOfColAndRow();
+        matrixTranspose();
     }
 }
