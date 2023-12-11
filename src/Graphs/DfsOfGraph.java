@@ -5,6 +5,34 @@ import java.util.*;
 import Graphs.GraphQues.Edge;
 import Graphs.GraphQues.Pair;
 
+/**
+ * The `DfsOfGraph` class contains methods for performing various operations on a graph, such as depth-first search, finding all paths between two vertices, cycle detection, topological sorting, Dijkstra's algorithm, and Bellman-Ford algorithm.
+ *
+ * Example Usage:
+ * int V = 6;
+ * ArrayList<Edge> graph[] = new ArrayList[V];
+ * createBasicGraphWithoutWeight(graph);
+ * dfs(graph, 0, new boolean[V]);
+ * allPaths(graph, new boolean[V], 0, "0", 3);
+ * boolean isCycle = cycleDetection(graph, new boolean[V], 0, new boolean[V]);
+ * topoSortPrint(graph, V);
+ * dijKstras(graph, 0, V);
+ * bellmanFordAlgo(graph, 0, V);
+ *
+ * Methods:
+ * - createBasicGraphWithoutWeight(ArrayList<Edge> graph[]): Initializes the graph with empty ArrayLists and adds edges to the graph.
+ * - dfs(ArrayList<Edge> graph[], int currVert, boolean visited[]): Performs depth-first search on the graph starting from the given vertex.
+ * - allPaths(ArrayList<Edge> graph[], boolean visited[], int curr, String path, int target): Finds all paths between the current vertex and the target vertex in the graph.
+ * - cycleDetection(ArrayList<Edge> graph[], boolean visited[], int curr, boolean recStack[]): Detects cycles in the graph using depth-first search.
+ * - topoSortUtil(ArrayList<Edge> graph[], int currVert, boolean visited[], Stack<Integer> stack): Utility function for topological sorting.
+ * - topoSortPrint(ArrayList<Edge> graph[], int V): Performs topological sorting on the graph and prints the sorted order.
+ * - isCycleUndirected(ArrayList<Edge>[] graph, boolean[] visited, int currVert, int parent): Checks if there is a cycle in an undirected graph.
+ * - dijKstras(ArrayList<Edge>[] graph, int src, int V): Implements Dijkstra's algorithm to find the shortest path from a source vertex to all other vertices in the graph.
+ * - bellmanFordAlgo(ArrayList<Edge>[] graph, int src, int V): Implements the Bellman-Ford algorithm to find the shortest path from a source vertex to all other vertices in the graph.
+ *
+ * Fields:
+ * - None
+ */
 public class DfsOfGraph {
 
     public static void createBasicGraphWithoutWeight(ArrayList<Edge> graph[]) {
@@ -194,8 +222,8 @@ public class DfsOfGraph {
     public static void main(String[] args) {
         int V = 6;
         ArrayList<Edge> graph[] = new ArrayList[V];
-        boolean visited[] = new boolean[V];
-        boolean recStack[] = new boolean[V];
+        // boolean visited[] = new boolean[V];
+        // boolean recStack[] = new boolean[V];
         createBasicGraphWithoutWeight(graph);
         // for (int i = 0; i < V; i++) {
         // if (!visited[i]) {
