@@ -170,6 +170,21 @@ public class DfsOfGraph {
                 }
             }
         }
+
+        // running additional loop to detect the negative cycle ..
+        for (int i = 0; i < V; i++) {
+            for (int j = 0; j < graph[i].size(); j++) { // finding all neighboring edges.
+                Edge e = graph[i].get(j);
+                // getting source and desti.
+                int u = e.source;
+                int v = e.destination;
+                // condtion to update and relaxation for distance.
+                if (dist[u] != Integer.MAX_VALUE && dist[u] + e.weight < dist[v]) {
+                    dist[v] = dist[u] + e.weight;
+                    System.out.println("Negative Weight Cycle.");
+                }
+            }
+        }
         // printing all distance...
         for (int i = 0; i < dist.length; i++) {
             System.out.print(dist[i] + " ");
