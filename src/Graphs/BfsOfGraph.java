@@ -4,8 +4,16 @@ import java.util.*;
 
 import Graphs.GraphQues.Edge;;
 
+/**
+ * The BfsOfGraph class implements the Breadth First Search (BFS) algorithm on a graph.
+ * It creates a basic graph without weights and performs BFS traversal starting from each unvisited vertex.
+ */
 public class BfsOfGraph {
 
+    /**
+     * Initializes the graph by creating an empty ArrayList for each vertex and adding edges to the graph.
+     * @param graph The graph represented as an array of ArrayLists of Edges.
+     */
     public static void createBasicGraphWithoutWeight(ArrayList<Edge> graph[]) {
         for (int i = 0; i < graph.length; i++) { // changing null value with empty arraylist on every index.
             graph[i] = new ArrayList<Edge>(); // if we add directly to null index, then it'll throw error.
@@ -27,6 +35,14 @@ public class BfsOfGraph {
         graph[7].add(new Edge(7, 5));
     }
 
+    /**
+     * Performs BFS traversal on the graph starting from the specified vertex.
+     * It uses a queue to keep track of the vertices to visit and marks visited vertices using a boolean array.
+     * @param graph The graph represented as an array of ArrayLists of Edges.
+     * @param V The number of vertices in the graph.
+     * @param visited An array to keep track of visited vertices.
+     * @param start The starting vertex for BFS traversal.
+     */
     public static void bfs(ArrayList<Edge> graph[], int V, boolean visited[], int start) {
         // we need to create Queue and Visited node array.
         Queue<Integer> q = new LinkedList<>();
@@ -48,6 +64,10 @@ public class BfsOfGraph {
         }
     }
 
+    /**
+     * The main method creates a basic graph, initializes a visited array, and performs BFS traversal on the graph.
+     * @param args The command line arguments.
+     */
     public static void main(String[] args) {
         int V = 8;
         ArrayList<Edge> graph[] = new ArrayList[V];
