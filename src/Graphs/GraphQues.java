@@ -22,6 +22,22 @@ public class GraphQues {
 
     }
 
+    static class Pair implements Comparable<Pair> { // for usage of Priority Queue.
+        int node;
+        int distance;
+
+        public Pair(int n, int d) {
+            this.node = n;
+            this.distance = d;
+        }
+
+        @Override
+        public int compareTo(Pair p2) { // this uses the pair type of p2 variable..
+            return this.distance - p2.distance; // this will sort on the basis of ascending order
+            // return p2.distance - this.distance -> it'll sort in descending order.
+        }
+    }
+
     public static void createBasicGraphWithoutWeight(ArrayList<Edge> graph[]) {
         for (int i = 0; i < graph.length; i++) { // changing null value with empty arraylist on every index.
             graph[i] = new ArrayList<Edge>(); // if we add directly to null index, then it'll throw error.
@@ -71,7 +87,7 @@ public class GraphQues {
             }
         }
     }
-    
+
     public static void main(String[] args) {
         int v = 4;
         ArrayList<Edge> graph[] = new ArrayList[v];
