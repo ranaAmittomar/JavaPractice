@@ -42,6 +42,26 @@ public class MathsFuncs {
         System.out.println("Square root of " + n + " is:" + Math.sqrt(n));
     }
 
+    public static int sqrtWithoutFunctions() {
+        int num = 25;
+        int start = 1;
+        int end = num;
+        int ans = 0;
+        while (start <= end) {
+            int mid = start + (end - start) / 2;
+            int sqr = mid * mid;
+            if (sqr == num) {
+                return mid;
+            } else if (sqr < num) {
+                ans = mid;
+                start = mid + 1;
+            } else {
+                end = mid - 1;
+            }
+        }
+        return ans;
+    }
+
     public static void main(String[] args) {
         /*
          * StaticFunctions staticFunctions = new StaticFunctions();
@@ -62,7 +82,8 @@ public class MathsFuncs {
          * System.out.println(String.format("I have '%c' characters to fix", 67));
          * System.out.println(divideNum(2, 0));
          */
-        logFuncs();
-        moreMathsFuncs();
+        // logFuncs();
+        // moreMathsFuncs();
+        System.out.println(sqrtWithoutFunctions());
     }
 }
