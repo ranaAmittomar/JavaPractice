@@ -2,9 +2,9 @@ package SystemDesignPrincples.StrategyDesignforScale.StrategyInterface;
 
 import SystemDesignPrincples.StrategyDesignforScale.StrategyInterface.interfaces.DriveStrategy;
 
-public class Vehicle {
+public abstract class Vehicle {
     /*
-     * We will know create anything like
+     * We will now create anything like
      * DriveStrategy obj1 = new NormalDrive();
      * DriveStrategy obj2 = new SpecialDrive();
      * DriveStrategy obj3 = new XyzDrive();
