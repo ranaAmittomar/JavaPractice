@@ -1,6 +1,8 @@
 package dsa;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
 import java.util.Map.Entry;
@@ -160,6 +162,41 @@ public class StringsQues {
         System.out.println("The character with the higher frequency between the two highest frequencies is: " + result);
     }
 
+    public static void charOccurInString() {
+        String[] str = { "aat", "bat", "cat" };
+        List<Integer> char1 = new ArrayList<>();
+
+        for (int i = 0; i < str.length; i++) {
+            String s = str[i];
+            char[] c = s.toCharArray();
+            for (int j = 0; j < c.length; j++) {
+                if (c[j] == 'a') {
+                    char1.add(j);
+                }
+            }
+        }
+        for (int i = 0; i < str.length; i++) {
+            System.out.println("a occur:" + char1.get(i));
+        }
+    }
+
+    public static void charOccur() {
+        String[] str = { "aaa", "bba", "cba", "jjj" };
+        List<Integer> ans = new ArrayList<>();
+        char x = 'a';
+
+        for (int i = 0; i < str.length; i++) {
+            String st = str[i]; // Fix: Use str[i] to get each string from the array
+            if (st.indexOf(x) != -1) {
+                ans.add(i); // Fix: Add the index (i) to the list if 'a' is found in the current string
+            }
+        }
+
+        // Print the result
+        System.out.println("Indices of words containing '" + x + "': " + ans);
+
+    }
+
     public static void main(String[] args) {
         /*
          * 
@@ -194,7 +231,9 @@ public class StringsQues {
         // findingSubstringUsingHashmap();
         // stringConversion();
         // stringConversionOptimised();
-        stringLargestOccur();
+        // stringLargestOccur();
+        charOccurInString();
+        charOccur();
 
     }
 }
