@@ -4,6 +4,6 @@ import SystemDesignPrincples.StrategyDesignforScale.StrategyInterface.interfaces
 
 public class OffRoadVehicle extends Vehicle {
     OffRoadVehicle(){
-        super (new SpecialDrive())
+        super (new SpecialDrive());
     }
 }

@@ -77,11 +77,12 @@ public class BSTconstruct {
     }
 
     public static void gettingInput() {
-        int[] binaryArr = { 1, 2, 3 };
+        int[] binaryArr = {  -10, -3, 0, 5, 9 };
         Node root = null;
         for (int i = 0; i < binaryArr.length; i++) {
             root = insert(root, binaryArr[i]);
         }
+        bstConstructFromArray(binaryArr);
         System.out.print("Pre order :- ");
         preOrder(root);
         System.out.println();
@@ -97,7 +98,26 @@ public class BSTconstruct {
         System.out.print("Sum of root: " + sumOfRoots(root));
     }
 
+    public static Node bstConstructFromArray(int[] arr) {
+        if (arr == null || arr.length == 0)
+            return null;
+        return bstArrayHelper(arr, 0, arr.length - 1);
+    }
+
+    private static Node bstArrayHelper(int[] arr, int i, int length) {
+
+        if (i > length)
+            return null;
+        int mid = i + (length - i) / 2;
+        Node root = new Node(arr[mid]);
+        root.left = bstArrayHelper(arr, i, mid - 1);
+        root.right = bstArrayHelper(arr, mid + 1, length);
+        return root;
+    }
+
     public static void main(String[] args) {
+    
+        
         gettingInput();
     }
 }
