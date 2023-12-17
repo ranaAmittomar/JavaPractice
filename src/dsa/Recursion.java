@@ -15,39 +15,39 @@ import java.util.Arrays;
  * certain number,
  * swapping characters in a string, checking if an array is sorted, and summing
  * the elements of an array.
- *
+ * <p>
  * Example Usage:
  * // Calculate the Fibonacci sequence for n=10
  * int fibResult = Recursion.fib(10);
  * System.out.println(fibResult); // Output: 55
- *
+ * <p>
  * // Print the sum of numbers from 1 to n=5
  * int sumResult = Recursion.printingSum(5);
  * System.out.println(sumResult); // Output: 15
- *
+ * <p>
  * // Print numbers from 1 to n=5 in ascending order
  * Recursion.printNums(5); // Output: 1 2 3 4 5
- *
+ * <p>
  * // Print numbers from 1 to n=5 in descending order
  * Recursion.printNumsRev(5); // Output: 5 4 3 2 1
- *
+ * <p>
  * // Print alphabets for numbers from 1 to n=5
  * String[] str = {"zero", "one", "two", "three", "four", "five"};
  * Recursion.printAlphaNums(str, 5); // Output: five four three two one
- *
+ * <p>
  * // Calculate the power of 2 for timesPow=3 and num=7
  * int powResult = Recursion.powOf2(3, 7);
  * System.out.println(powResult); // Output: 343
- *
+ * <p>
  * // Calculate the fast exponential for time=3 and num=2
  * int expoResult = Recursion.fastExpo(3, 2);
  * System.out.println(expoResult); // Output: 8
- *
+ * <p>
  * // Check if an array is sorted
  * int[] arr = {1, 2, 3, 4, 5};
  * boolean isSorted = Recursion.sortedArrCheck(arr, 1);
  * System.out.println(isSorted); // Output: true
- *
+ * <p>
  * // Generate subsets of an array
  * ArrayList<Integer> input = new ArrayList<>(Arrays.asList(1, 2, 3));
  * ArrayList<Integer> output = new ArrayList<>();
@@ -60,7 +60,7 @@ import java.util.Arrays;
  * // 23
  * // 2
  * // 3
- *
+ * <p>
  * // Generate subsets of a string
  * String inputString = "abc";
  * String outputString = "";
@@ -73,11 +73,11 @@ import java.util.Arrays;
  * // bc
  * // b
  * // c
- *
+ * <p>
  * // Calculate the number of jumps to reach a certain number
  * int jumpResult = Recursion.jumpStairs(5);
  * System.out.println(jumpResult); // Output: 13
- *
+ * <p>
  * // Swap characters in a string and generate permutations
  * String str = "abc";
  * Recursion.permutationStr(str, 0);
@@ -88,7 +88,7 @@ import java.util.Arrays;
  * // bca
  * // cab
  * // cba
- *
+ * <p>
  * // Solve the Tower of Hanoi problem
  * Recursion.towerOfHanoi(3, 'A', 'B', 'C');
  * // Output:
@@ -99,11 +99,11 @@ import java.util.Arrays;
  * // Move disk 1 from rod B to rod A
  * // Move disk 2 from rod B to rod C
  * // Move disk 1 from rod A to rod C
- *
+ * <p>
  * // Test a weird recursive function
  * int weirdResult = Recursion.testingWeirdFunc(5);
  * System.out.println(weirdResult); // Output: 120
- *
+ * <p>
  * // Check if an array is sorted and calculate the sum of its elements
  * int[] arr = {1, 2, 3};
  * int size = arr.length;
@@ -256,10 +256,12 @@ public class Recursion {
             return;
         }
         towerOfHanoi(n - 1, from_rod, aux_rod, to_rod);
+
         System.out.println("Move disk " + n + " from rod "
-                + from_rod + " to rod "
+                + from_rod + " ->  "
                 + to_rod);
         towerOfHanoi(n - 1, aux_rod, to_rod, from_rod);
+
     }
 
     public static int testingWeirdFunc(int n) {
@@ -418,10 +420,10 @@ public class Recursion {
         // // int num = 5;
         // // System.out.println("Number of jumps to reach " + num + " are " +
         // // jumpStairs(num));
-        String s = "abc";
+//        String s = "abc";
         // String outputString = "";
         // subsetString(s, outputString, 0);
-        permutationStr(s, 0);
+//        permutationStr(s, 0);
         // int n = 3;
         // towerOfHanoi(n,'A','B','C');
         // // System.out.println(testingWeirdFunc(5));
@@ -445,6 +447,7 @@ public class Recursion {
         // }
 
         // System.out.println("Answer is : " + powerOfAOnB(a, b));
+        towerOfHanoi(3, 'A', 'B', 'C');
     }
 
 }

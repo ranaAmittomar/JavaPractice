@@ -37,7 +37,7 @@ public class QueenProb {
             return true;
         }
 
-        // trying to place queen each row of col.. USING BACKTRACK
+        // trying to place queen each row of col. USING BACKTRACK
 
         for (int i = 0; i < N; i++) {
             if (isSafe(board, i, col)) { // if safe to place.

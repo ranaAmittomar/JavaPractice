@@ -77,10 +77,10 @@ public class BSTconstruct {
     }
 
     public static void gettingInput() {
-        int[] binaryArr = {  -10, -3, 0, 5, 9 };
+        int[] binaryArr = {-10, -3, 0, 5, 9};
         Node root = null;
-        for (int i = 0; i < binaryArr.length; i++) {
-            root = insert(root, binaryArr[i]);
+        for (int j : binaryArr) {
+            root = insert(root, j);
         }
         bstConstructFromArray(binaryArr);
         System.out.print("Pre order :- ");
@@ -116,8 +116,8 @@ public class BSTconstruct {
     }
 
     public static void main(String[] args) {
-    
-        
+
+
         gettingInput();
     }
 }

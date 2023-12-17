@@ -2,7 +2,7 @@ package leetcode_questions;
 
 public class MergeSortedArray {
 
-    public void merge(int[] nums1, int m, int[] nums2, int n) {
+    public static void merge(int[] nums1, int m, int[] nums2, int n) {
         int i = m - 1;
         int j = n - 1;
         int k = m + n - 1;
@@ -17,7 +17,6 @@ public class MergeSortedArray {
                 j--;
             }
         }
-
     }
 
     public static void main(String[] args) {
@@ -25,7 +24,13 @@ public class MergeSortedArray {
         int[] secondArr = { 2, 4, 6, 8 };
         int firstLen = firstArr.length;
         int secondLen = secondArr.length;
-        System.out.println();
 
+        MergeSortedArray merger = new MergeSortedArray();
+        merger.merge(firstArr, firstLen, secondArr, secondLen);
+
+        // Print the merged array
+        for (int num : firstArr) {
+            System.out.print(num + " ");
+        }
     }
 }

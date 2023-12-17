@@ -33,6 +33,9 @@ public class QueueQues {
             q.add(num);
         }
         System.out.println("Queue after loop insertion is : " + q);
+        System.out.println("Queue offer : " + q.offer(6));
+        System.out.println("Queue after loop insertion is : " + q);
+
         sc.close();
     }
 
